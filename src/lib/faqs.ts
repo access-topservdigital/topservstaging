@@ -15,7 +15,7 @@ export const generalFaqs: Faq[] = [
   {
     question: "What makes TopServ Digital different from other marketing agencies?",
     answer:
-      "TopServ Digital is the home of BrandFormance: brand building and performance marketing run as 1 system, instead of choosing between brand or leads. The agency has worked exclusively with home service companies since 2016, publishes its pricing anchor openly ($1,000 per week floor, $10,000 one time activation), and has generated over $89M in revenue for 200+ contractor clients.",
+      "TopServ Digital is the home of BrandFormance: brand building and performance marketing run as 1 system, instead of choosing between brand or leads. The agency has worked exclusively with home service companies since 2016, publishes its pricing anchor openly ($1,000 per week floor, $10,000 one time activation).",
   },
   {
     question: "What is BrandFormance?",

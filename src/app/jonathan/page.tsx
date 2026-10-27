@@ -53,7 +53,7 @@ export const metadata: Metadata = {
 
 const URL = `${siteConfig.url}/jonathan`;
 const PERSON_ID = `${siteConfig.url}/#jonathan`;
-const { booking, company, podcast, stats } = siteConfig;
+const { booking, company, podcast } = siteConfig;
 
 const BOOK_TITLE = "F#CK Digital Marketing";
 const BOOK_SUBTITLE = "Why Building a Memorable Brand Matters More Than Rankings";
@@ -429,7 +429,7 @@ export default function JonathanPage() {
                   HVAC first and deliberately narrow. The 2024 rebrand made
                   video the engine of the system. The work now runs from{" "}
                   {company.address.city}, {company.address.region}, across 6
-                  home service trades, {stats.clients} clients in.
+                  home service trades.
                 </p>
                 <p className="text-foreground">
                   He says all of this on camera, at length, because trust moves

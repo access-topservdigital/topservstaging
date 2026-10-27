@@ -19,7 +19,6 @@ const CREDITS = [
   { role: "Filmed on", name: "Location" },
   { role: "Produced by", name: "TopServ Digital" },
   { role: "Now showing", name: "In your market" },
-  { role: "Box office", name: "$89M+ generated" },
 ] as const;
 
 function wrap(min: number, max: number, v: number) {

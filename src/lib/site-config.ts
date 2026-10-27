@@ -41,12 +41,17 @@ export const siteConfig = {
     yelp: "https://www.yelp.com/biz/topserv-digital-frisco",
   },
   stats: {
-    clients: "200+",
-    revenueGenerated: "$89M+",
+    // WITHHELD FOR LAUNCH. clients "200+", revenueGenerated "$89M+" and
+    // teamSize "50+" are off every public surface until each one has a
+    // source behind it. The values are parked here verbatim so restoring
+    // them is this 1 edit plus putting each figure back where it was.
+    //
+    // yearsInBusiness is not withheld: it follows from foundedYear, which is
+    // a fact the site states anyway.
+    //
     // Founded 2016. Kept literal: computing from Date() bakes the build year
     // into prerendered pages and hydration-mismatches when the year rolls over.
     yearsInBusiness: 10,
-    teamSize: "50+",
   },
 };
 

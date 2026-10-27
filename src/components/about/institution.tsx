@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { siteConfig } from "@/lib/site-config";
 import { Shell } from "@/components/about/page-grid";
+import { siteConfig } from "@/lib/site-config";
 
 /**
  * What is behind the methodology.
@@ -26,7 +26,7 @@ import { Shell } from "@/components/about/page-grid";
  * Guidelines 3.3).
  */
 
-const { company, podcast, stats } = siteConfig;
+const { company, podcast } = siteConfig;
 
 export function Institution() {
   return (
@@ -66,25 +66,6 @@ export function Institution() {
               one.
             </p>
 
-            {/* Only the 2 published figures, as they appear elsewhere. */}
-            <dl className="mt-8 grid max-w-[26rem] grid-cols-2 border-t border-border">
-              <div className="border-r border-border py-5 pr-6">
-                <dd className="display text-[clamp(1.5rem,3vw,2.25rem)] leading-none">
-                  {stats.clients}
-                </dd>
-                <dt className="label-mono mt-2 text-ink-faint">
-                  home service clients
-                </dt>
-              </div>
-              <div className="py-5 pl-6">
-                <dd className="display text-[clamp(1.5rem,3vw,2.25rem)] leading-none">
-                  {stats.teamSize}
-                </dd>
-                <dt className="label-mono mt-2 text-ink-faint">
-                  certified professionals
-                </dt>
-              </div>
-            </dl>
 
             <Link
               href="/jonathan"

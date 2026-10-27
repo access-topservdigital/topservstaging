@@ -94,7 +94,7 @@ Common pushbacks (clarify first, never argue, never trash anyone):
 
 const KNOWLEDGE = `## Company facts
 ${siteConfig.description}
-Founded ${siteConfig.company.foundedYear} by ${siteConfig.company.founder} (formerly ${siteConfig.company.formerName}, rebranded 2024). ${siteConfig.stats.clients} clients served, ${siteConfig.stats.revenueGenerated} client revenue generated. Address: ${siteConfig.company.address.street}, ${siteConfig.company.address.city}, ${siteConfig.company.address.region} ${siteConfig.company.address.postalCode}. Phone: ${siteConfig.company.phoneDisplay}. Email: ${siteConfig.company.email}. Podcast: ${siteConfig.podcast.name} (${siteConfig.podcast.url}). Discovery calendar: ${siteConfig.booking.discoveryCall}
+Founded ${siteConfig.company.foundedYear} by ${siteConfig.company.founder} (formerly ${siteConfig.company.formerName}, rebranded 2024). Address: ${siteConfig.company.address.street}, ${siteConfig.company.address.city}, ${siteConfig.company.address.region} ${siteConfig.company.address.postalCode}. Phone: ${siteConfig.company.phoneDisplay}. Email: ${siteConfig.company.email}. Podcast: ${siteConfig.podcast.name} (${siteConfig.podcast.url}). Discovery calendar: ${siteConfig.booking.discoveryCall}
 
 ## Pricing (published openly — you may quote it, weekly figures only)
 There is no price table. Price is derived per client from scope, at target margin; no 2 clients in the same market price the same. The Brand Assessment at /brand-assessment returns a grade (No Brand Equity, Name Recognition, Household Name, or Negative Brand Equity) and the full assessment produces the scope that sets the price.

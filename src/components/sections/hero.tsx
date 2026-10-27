@@ -103,11 +103,12 @@ function TradeRotor() {
   );
 }
 
+// 3 figures came off for launch: 200+ home service clients, $89M+ client
+// revenue generated, 50+ certified professionals. They go back when each has
+// a source; the values are parked in site-config. Years in the trades stays,
+// because it follows from the founding year the site states anyway.
 const STATS = [
-  { prefix: "", value: 200, suffix: "+", label: "home service clients" },
-  { prefix: "$", value: 89, suffix: "M+", label: "client revenue generated" },
   { prefix: "", value: siteConfig.stats.yearsInBusiness, suffix: "", label: "years in the trades" },
-  { prefix: "", value: 50, suffix: "+", label: "certified professionals" },
 ] as const;
 
 /**
@@ -245,7 +246,10 @@ export function Hero() {
 
         <motion.dl
           variants={fadeUp}
-          className="mt-16 grid grid-cols-2 gap-x-8 gap-y-6 border-t border-border pt-8 sm:grid-cols-4"
+          // Flex rather than a 4 column grid: the row holds 1 stat today and
+          // 4 again once the withheld figures are sourced, and a fixed column
+          // count would leave 3 empty cells in the meantime.
+          className="mt-16 flex flex-wrap gap-x-14 gap-y-6 border-t border-border pt-8"
         >
           {STATS.map((stat, i) => (
             <div key={stat.label}>
