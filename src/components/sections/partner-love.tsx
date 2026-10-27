@@ -163,7 +163,7 @@ export function PartnerLove({ tinted = false }: { tinted?: boolean }) {
         >
           <Button asChild size="lg" className="text-base">
             <Link href="/brand-assessment">
-              Get Your Brand Grade
+              Get My Brand Grade
               <ArrowRight className="size-4" aria-hidden />
             </Link>
           </Button>

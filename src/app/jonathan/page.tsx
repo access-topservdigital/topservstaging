@@ -460,7 +460,7 @@ export default function JonathanPage() {
           </p>
           <Button asChild size="lg" className="text-base">
             <Link href="/brand-assessment">
-              Get your Brand Grade
+              Get My Brand Grade
               <ArrowRight className="size-4" aria-hidden />
             </Link>
           </Button>

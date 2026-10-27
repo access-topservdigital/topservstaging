@@ -167,8 +167,9 @@ export default function BrandAssessmentPage() {
                   your grade with what it means for your business.
                 </p>
                 <p className="mt-5 text-[0.9375rem] leading-relaxed text-muted-foreground md:text-base">
-                  The optional details sharpen the grade and give the strategy
-                  call a head start. Skip them and you still get a grade.
+                  The optional details sharpen the grade and give the
+                  BrandFormance Call a head start. Skip them and you still get
+                  a grade.
                 </p>
               </Measure>
             </div>

@@ -9,7 +9,7 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Talk to TopServ Digital: (214) 429-4245, info@topservdigital.com, or book a discovery call. Located at 15222 King Road, Unit 403, Frisco, TX 75036.",
+    "Talk to TopServ Digital: (214) 429-4245, info@topservdigital.com, or book a BrandFormance Call. Located at 15222 King Road, Unit 403, Frisco, TX 75036.",
   alternates: { canonical: "/contact" },
 };
 
@@ -58,11 +58,12 @@ export default function ContactPage() {
                 <CalendarCheck className="size-5 text-brand" aria-hidden />
                 <h2 className="label-mono mt-4 text-muted-foreground">Fastest path</h2>
                 <p className="mt-2 text-base font-semibold">
-                  30-minute discovery call — we&apos;ll come having already
-                  looked at your market.
+                  We&apos;ll review your market, your current brand position and
+                  your growth goals and recommend the BrandFormance program
+                  that fits.
                 </p>
                 <Button asChild className="mt-4 w-full">
-                  <a href={siteConfig.booking.discoveryCall}>Book a discovery call</a>
+                  <a href={siteConfig.booking.discoveryCall}>BOOK my BrandFormance Call</a>
                 </Button>
               </div>
               <div className="rounded-lg border border-border bg-card p-6">

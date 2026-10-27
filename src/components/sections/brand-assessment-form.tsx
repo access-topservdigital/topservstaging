@@ -38,7 +38,7 @@ export function BrandAssessmentForm() {
             anywhere; nothing here can honor one. */}
         <Button asChild size="lg" className="mt-6 text-base">
           <a href={siteConfig.booking.discoveryCall}>
-            Book your strategy call
+            BOOK my BrandFormance Call
             <ArrowRight className="size-4" aria-hidden />
           </a>
         </Button>

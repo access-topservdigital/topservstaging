@@ -65,7 +65,7 @@ export function Navbar() {
             {siteConfig.company.phoneDisplay}
           </a>
           <Button asChild>
-            <Link href="/brand-assessment">Get Your Brand Grade</Link>
+            <Link href="/brand-assessment">Get My Brand Grade</Link>
           </Button>
         </div>
 
@@ -97,7 +97,7 @@ export function Navbar() {
               </a>
               <Button asChild size="lg" className="mt-4">
                 <Link href="/brand-assessment" onClick={() => setOpen(false)}>
-                  Get Your Brand Grade
+                  Get My Brand Grade
                 </Link>
               </Button>
             </nav>

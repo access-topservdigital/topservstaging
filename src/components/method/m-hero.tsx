@@ -88,7 +88,7 @@ export function MHero() {
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="text-base">
-                <Link href="/brand-assessment">Get Your Brand Grade</Link>
+                <Link href="/brand-assessment">Get My Brand Grade</Link>
               </Button>
             </div>
           </div>

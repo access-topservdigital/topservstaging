@@ -115,12 +115,12 @@ export function Footer() {
           <div className="flex shrink-0 flex-wrap items-center gap-3">
             <Button asChild size="lg">
               <Link href="/brand-assessment">
-                Get your Brand Grade
+                Get My Brand Grade
                 <ArrowRight className="size-4" aria-hidden />
               </Link>
             </Button>
             <Button asChild size="lg" variant="outline">
-              <a href={siteConfig.booking.discoveryCall}>Book a discovery call</a>
+              <a href={siteConfig.booking.discoveryCall}>BOOK my BrandFormance Call</a>
             </Button>
           </div>
         </div>

@@ -166,7 +166,7 @@ export default async function BlogPostPage({
             Want this run for your company instead of reading about it?
           </p>
           <Button asChild size="lg">
-            <a href={siteConfig.booking.discoveryCall}>Book a discovery call</a>
+            <a href={siteConfig.booking.discoveryCall}>BOOK my BrandFormance Call</a>
           </Button>
         </div>
       </section>

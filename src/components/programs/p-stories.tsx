@@ -261,12 +261,12 @@ export function SCta() {
             <div className="mt-9 flex flex-wrap gap-3">
               <Button asChild size="lg" className="text-base">
                 <a href="https://book.topservdigital.com">
-                  Schedule a call
+                  BOOK my BrandFormance Call
                   <ArrowRight aria-hidden className="ml-1 size-4" />
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline" className="text-base">
-                <Link href="/brand-assessment">Get your Brand Grade first</Link>
+                <Link href="/brand-assessment">Get My Brand Grade</Link>
               </Button>
             </div>
           </div>

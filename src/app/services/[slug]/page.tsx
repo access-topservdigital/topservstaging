@@ -83,7 +83,7 @@ export default async function ServicePage({
             <div className="mt-8 flex flex-wrap gap-4">
               <Button asChild size="lg" className="text-base">
                 <a href={siteConfig.booking.discoveryCall}>
-                  Book a discovery call
+                  BOOK my BrandFormance Call
                   <ArrowRight className="size-4" aria-hidden />
                 </a>
               </Button>
