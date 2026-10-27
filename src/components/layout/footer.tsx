@@ -165,6 +165,10 @@ export function Footer() {
               <br />
               {company.address.city}, {company.address.region} {company.address.postalCode}
             </address>
+            {/* The visible number. This is the 1 that a CallRail swap may
+                rewrite if it arrives through the container; the schema's
+                telephone field must not be touched. Both read the same
+                siteConfig value, so with no swap running they agree. */}
             <p className="mt-4">
               <a
                 href={`tel:${company.phone}`}

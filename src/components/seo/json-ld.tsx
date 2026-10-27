@@ -57,6 +57,20 @@ const organizationNode = {
         url: siteConfig.url,
         logo: `${assetOrigin}/images/topserv-logo.png`,
         image: `${assetOrigin}${siteConfig.ogImage}`,
+        // STATIC, AND NOT FOR SWAPPING. This is the real line and has to
+        // stay it. If a CallRail number swap arrives through the GTM
+        // container it may rewrite the visible number in the footer, which
+        // is what it is for, but it must not reach this field: the schema
+        // states the company's actual phone number, and a tracking number
+        // here would publish a number that is not the business's own to
+        // every consumer of the graph.
+        //
+        // 2 things keep it out of reach. The JSON-LD is server rendered, so
+        // the number is already correct in the HTML before any script runs.
+        // And swap scripts walk rendered text nodes; the contents of a
+        // script tag are not one, so there is nothing for them to match.
+        // If a swap is ever configured to target it anyway, exclude this
+        // block on the CallRail side rather than changing it here.
         telephone: company.phone,
         email: company.email,
         foundingDate: String(company.foundedYear),

@@ -9,6 +9,7 @@ import { TrackPageview } from "@/components/analytics/track-pageview";
 import { MotionProvider } from "@/components/motion/motion-provider";
 import { ContentSlot } from "@/components/content/content-slot";
 import { SiteGraphJsonLd } from "@/components/seo/json-ld";
+import { TagManager, TagManagerNoScript } from "@/components/analytics/tag-manager";
 
 const barlow = Barlow({
   weight: ["400", "500", "600", "700"],
@@ -68,6 +69,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${barlow.variable} ${bebas.variable} ${dmMono.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-background font-sans text-foreground">
+        <TagManagerNoScript />
         {/* The company and the site, on every page. Every Service, Article
             and VideoObject node elsewhere references these @ids, and a
             reference only resolves if the node is in the same page's graph.
@@ -88,6 +90,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <Footer />
           <ChatWidgetLazy />
           <TrackPageview />
+          <TagManager />
         </MotionProvider>
       </body>
     </html>
