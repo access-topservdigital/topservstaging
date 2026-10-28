@@ -95,6 +95,17 @@ export async function requestAssessment(
   // (spec v2 §14). Best-effort event; never blocks the user.
   try {
     await getSupabaseAdmin()
+      // NOTHING FROM THIS FORM GOES TO GOOGLE ANALYTICS, and the privacy
+      // policy says so in as many words: "never your name, email or phone".
+      // This row is the conversion count and it lands in our own Supabase,
+      // not in GA. It carries a synthetic path and no field from the
+      // submission, so there is nothing here to leak.
+      //
+      // If a conversion signal is ever wanted in GA or Ads, push an event
+      // with no form fields on it. Do not pass name, email or phone, and do
+      // not let the container read them off the form either: a GTM form
+      // trigger with field variables can capture an email without anyone
+      // touching this repo, which would make the policy untrue.
       ?.from("page_views")
       .insert({ path: "/brand-assessment/completed", referrer: null, ua: "event" });
   } catch {}

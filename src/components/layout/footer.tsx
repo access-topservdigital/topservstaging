@@ -108,8 +108,7 @@ export function Footer() {
               <span className="text-brand">.</span>
             </p>
             <p className="mt-3 max-w-xl text-base leading-relaxed text-muted-foreground">
-              The Brand Assessment returns a grade, and the grade tells you
-              where your next marketing dollar should go.
+              The Brand Assessment returns a grade.
             </p>
           </div>
           <div className="flex shrink-0 flex-wrap items-center gap-3">

@@ -93,9 +93,8 @@ export default function BrandAssessmentPage() {
                   stand.
                 </p>
                 <p className="mt-5 text-[0.9375rem] leading-relaxed text-muted-foreground md:text-base">
-                  Each grade comes with a consequence for how you should spend
-                  your next marketing dollar. If the honest answer is fix
-                  operations before marketing, that is the answer you get.
+                  If the honest answer is fix operations before marketing,
+                  that is the answer you get.
                 </p>
               </Measure>
             </div>

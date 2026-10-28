@@ -13,7 +13,7 @@ export default function PrivacyPolicyPage() {
       <div className="mx-auto max-w-3xl px-5 pb-20 pt-20 md:pt-28">
         <p className="label-mono text-brand">Legal</p>
         <h1 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">Privacy Policy</h1>
-        <p className="mt-3 text-sm text-muted-foreground">Effective Date: September 24, 2025</p>
+        <p className="mt-3 text-sm text-muted-foreground">Effective Date: October 28, 2026</p>
         <div className="prose prose-invert mt-10 max-w-none">
           <p>
             Welcome to <strong>TopServ Digital</strong> (“Company,” “we,” “our,” “us”). By accessing
@@ -38,6 +38,29 @@ export default function PrivacyPolicyPage() {
               technologies to improve user experience, analyze trends, and monitor site usage.
             </li>
           </ul>
+
+          {/* Approved by Ryan, October 2026. Verbatim: it states what the
+              analytics actually collect and what the assessment stores, so it
+              has to keep matching the code. The form sends nothing to Google
+              Analytics, and nothing it stores reaches analytics either. */}
+          <h2>Google Analytics and the Brand Assessment</h2>
+          <p>
+            We use Google Analytics, a web analytics service from Google LLC, to
+            understand how visitors use this site. It uses cookies to collect
+            information such as the pages visited, the time spent on them, and
+            the device and browser used. When you take the Brand Assessment, we
+            also record your answers, your grade and any optional details you
+            choose, never your name, email or phone. You can read how Google
+            uses information from sites that use its services at{" "}
+            <a href="https://policies.google.com/technologies/partner-sites">
+              https://policies.google.com/technologies/partner-sites
+            </a>
+            , and opt out with the Google Analytics Opt-out Browser Add-on at{" "}
+            <a href="https://tools.google.com/dlpage/gaoptout">
+              https://tools.google.com/dlpage/gaoptout
+            </a>
+            .
+          </p>
 
           <h2>2. How We Use Your Information</h2>
           <p>We use collected information to:</p>
