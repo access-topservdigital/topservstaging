@@ -38,7 +38,8 @@ compression, domain cutover, and the off-site entity campaign.
 
 ## 2b. Pre-deploy hygiene (from the Aug 2026 site audit)
 
-- [ ] Delete staging artifacts from `public/`: `design-lab.html` (196KB, noindexed but shippable) and `images/lab-o/` (2.0MB) — both are internal design-lab material.
+- [x] ~~Delete `design-lab.html` from `public/`~~ DONE (29 Oct 2026): moved to `design-lab/design-lab.html`, out of the served directory. It was reachable at `/design-lab.html` on every deploy and still carried the 3 withheld figures and the former clients' names.
+- [ ] Delete `public/images/lab-o/` (2.0MB) and `public/videos/lab`: design-lab material, served but unreferenced. The HTML that used them is no longer in `public/`.
 - [ ] Compress `public/videos/portfolio/` teasers (~6.5MB total). ~~preload strategy~~ DONE: cinema stage now uses `preload="metadata"` + in-view playback (913KB no longer downloads below the fold); ambient Vimeo replaced with the self-hosted MP4.
 - [x] ~~Compress partner logos~~ DONE: 128px WebP variants (~123KB total, was 543KB).
 - [ ] Compress `public/images/process/` PNGs used as timeline clip thumbnails (~1MB as CSS backgrounds).

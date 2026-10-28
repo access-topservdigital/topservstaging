@@ -276,7 +276,7 @@ export const tenQuestions = [
   },
   {
     q: "How can a contractor get started?",
-    a: "Get your Brand Grade. The Brand Assessment reads how strong your brand actually is in your market and returns 1 of 4 grades, each with what it means for your business. The program and the price come from the full assessment afterward: diagnosis first, prescription second, never a menu.",
+    a: "Get My Brand Grade. The Brand Assessment reads how strong your brand actually is in your market and returns 1 of 4 grades, each with what it means for your business. The program and the price come from the full assessment afterward: diagnosis first, prescription second, never a menu.",
   },
 ] as const;
 

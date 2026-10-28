@@ -117,7 +117,7 @@ export function SResults() {
             id="s-results-heading"
             className="display mt-5 text-[clamp(1.6rem,2.8vw,2.4rem)] leading-[1.02]"
           >
-            Where each one started, and where it is now.
+            How much each one grew, and over how long.
           </h2>
           <p className="mt-6 max-w-[58ch] text-[0.9375rem] leading-relaxed text-muted-foreground md:text-base">
             These are home service companies in real markets, not composites.
