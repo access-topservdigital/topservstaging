@@ -63,7 +63,13 @@ export function PartnerMarquee({ tinted = false }: { tinted?: boolean }) {
         />
         {/* Wraps rather than scrolls sideways, so a narrow screen stacks the
             row instead of hiding logos off the edge. */}
-        <ul className="relative mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-6 gap-y-6 px-5">
+        {/* Sized so all 6 plates hold 1 line from 1280px up: 6 x 192 plus 5 x 12
+            of gap is 1212, which clears the roughly 1225 a 1280 viewport
+            leaves once the page padding and the vertical scrollbar are taken
+            off. The scrollbar is the part worth remembering; 16px of gap
+            fitted on paper and wrapped in a browser. Below 1280 it wraps
+            rather than running off the edge. */}
+        <ul className="relative mx-auto flex max-w-[84rem] flex-wrap items-center justify-center gap-x-3 gap-y-6 px-5">
           {shown.map((p) => (
             // Every plate is the same box, so the row reads as a set rather
             // than as marks of assorted sizes. The logos differ in aspect
@@ -73,7 +79,7 @@ export function PartnerMarquee({ tinted = false }: { tinted?: boolean }) {
             // the ink off the plate edge.
             <li
               key={p.file}
-              className="flex h-28 w-56 items-center justify-center rounded-[14px] bg-[#f4f5f2] p-3 shadow-[0_1px_0_rgba(255,255,255,0.08)_inset,0_10px_30px_-12px_rgba(0,0,0,0.6)]"
+              className="flex h-28 w-48 items-center justify-center rounded-[14px] bg-[#f4f5f2] p-3 shadow-[0_1px_0_rgba(255,255,255,0.08)_inset,0_10px_30px_-12px_rgba(0,0,0,0.6)]"
             >
               {/* Plain img on purpose: these are small fixed-height marks
                   already sized as -sm webp, so next/image would add a
