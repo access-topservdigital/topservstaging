@@ -47,11 +47,6 @@ export const industryCopy: Record<string, IndustryCopy> = {
         answer:
           "Own the moment of panic: Local Services Ads and top-of-page search ads for emergency keywords, a Google Business Profile with strong recent reviews, click-to-call everything, and automation that answers instantly — because the homeowner with water on the floor calls the next number if you miss.",
       },
-      {
-        question: "What results has TopServ produced for plumbing companies?",
-        answer:
-          "Flow Pros Plumbing grew from roughly 1,000 to over 136,500 monthly website visits in five months with TopServ's SEO and content program, with domain authority up from 21 to 35 and their Google Business Profile leading a 15-mile radius for core plumbing keywords.",
-      },
     ],
   },
   roofing: {

@@ -172,17 +172,25 @@ export const homeProofSections = {
   videoTestimonials: false,
 };
 
-/** The line that explains the missing names, wherever they are withheld. */
+/**
+ * The client stories the site publishes.
+ *
+ * 1 row, not 6. Jonathan's call: former clients come off the site, and every
+ * story shown needs numbers with a source behind them. All Heart Heating,
+ * Your New Door, Nick AC, Zen Air and C and S Air are gone. The last 3 can
+ * return once their numbers are sourced.
+ *
+ * NO DOLLAR FIGURES. Revenue is not shown without the client's say so, so a
+ * row carries the growth it can state and nothing else. Spencer's row keeps
+ * "289 percent over 9 years" and has lost "$1.8M to $7M". The result field
+ * is now that percentage rather than a before and after, which is why the
+ * detail field is gone with it.
+ */
 export const namesWithheldNote =
   "Company names are withheld until each client clears theirs for publication.";
 
 export const sixClients = [
-  { client: "All Heart Heating", market: "Lancaster, CA", result: "$3.9M to $9M", detail: "131 percent growth, 23 percent CAGR" },
-  { client: "Spencer Air", market: "Irving, TX", result: "$1.8M to $7M", detail: "289 percent over 9 years" },
-  { client: "Your New Door", market: "Irving, TX", result: "$4M to $7M", detail: "75 percent CAGR, 99 percent SEO visibility" },
-  { client: "Nick AC", market: "Hammond, LA", result: "$1.7M to $4M", detail: "94 percent growth, 25 percent CAGR" },
-  { client: "Zen Air", market: "Duluth, GA", result: "$1.1M to $3.5M", detail: "154 percent growth, 20 percent CAGR" },
-  { client: "C and S Air", market: "Mansfield, TX", result: "$500K to $3.5M", detail: "54 percent CAGR, ranks first in market" },
+  { client: "Spencer Air", market: "Irving, TX", result: "289 percent over 9 years" },
 ] as const;
 
 /**

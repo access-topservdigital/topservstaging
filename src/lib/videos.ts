@@ -21,13 +21,6 @@ function yt(id: string, rest: Omit<PortfolioVideo, "id" | "embedUrl" | "thumbnai
 // Verified live videos from TopServ's client channels (titles and upload
 // dates pulled from YouTube, Aug 2026).
 export const portfolioVideos: PortfolioVideo[] = [
-  yt("_l9EU1eXza4", {
-    title: "Why Our Customers Keep Coming Back | Flow Pros Plumbing",
-    client: "Flow Pros Plumbing",
-    trade: "Plumbing",
-    kind: "Customer testimonial film",
-    uploadDate: "2024-12-23",
-  }),
   yt("IDMA6lnKITI", {
     title: "Why Over 100 Neighbors Trust Sugar Land Premier Roofing for Their Roofs!",
     client: "Sugar Land Premier Roofing",
@@ -48,19 +41,5 @@ export const portfolioVideos: PortfolioVideo[] = [
     trade: "HVAC",
     kind: "Brand story film",
     uploadDate: "2024-04-04",
-  }),
-  yt("r_9BXvgyCUU", {
-    title: "How Brandon Fixed My Texas Home's AC Nightmare!",
-    client: "The Problem Solvers",
-    trade: "HVAC",
-    kind: "Customer testimonial film",
-    uploadDate: "2025-01-21",
-  }),
-  yt("NBoTeGaq410", {
-    title: "Meet The Problem Solvers: Your Go-To Team for Electrical Repairs & Upgrades!",
-    client: "The Problem Solvers",
-    trade: "Electrical",
-    kind: "Team spotlight film",
-    uploadDate: "2025-01-20",
   }),
 ];

@@ -39,11 +39,22 @@ const OLD_BUNDLE_PAGES: Record<string, string> = {
 };
 const TRADES = ["hvac", "plumbing", "roofing", "electrical", "garage-door", "pest-control"];
 
-const CASE_STUDY_SLUGS: Record<string, string> = {
-  "all-heart-case-study": "all-heart",
-  "flow-pros-case-study": "flow-pros-plumbing",
-  "the-problem-solvers-case-study": "the-problem-solvers",
-};
+// The 3 published case studies came off in October 2026: former clients leave
+// the site and every story shown needs sourced numbers. Nothing replaced them,
+// so every URL that ever pointed at one now lands on the hub rather than at a
+// page that is not there. That covers the old Webflow URLs, which existed at
+// both a nested and a top level path, and the slugs this site itself used.
+const RETIRED_CASE_STUDY_PATHS = [
+  "/about/case-studies/all-heart-case-study",
+  "/about/case-studies/flow-pros-case-study",
+  "/about/case-studies/the-problem-solvers-case-study",
+  "/all-heart-case-study",
+  "/flow-pros-case-study",
+  "/the-problem-solvers-case-study",
+  "/case-studies/all-heart",
+  "/case-studies/flow-pros-plumbing",
+  "/case-studies/the-problem-solvers",
+];
 
 const nextConfig: NextConfig = {
   // Next's own trailing-slash redirect answers 308 and lands on the stripped
@@ -84,19 +95,13 @@ const nextConfig: NextConfig = {
         destination: `/industries/${trade}`,
         statusCode: 301,
       })),
-      // Case studies existed at both nested and top-level URLs.
-      ...Object.entries(CASE_STUDY_SLUGS).flatMap(([oldSlug, newSlug]) => [
-        {
-          source: `/about/case-studies/${oldSlug}`,
-          destination: `/case-studies/${newSlug}`,
-          statusCode: 301,
-        },
-        {
-          source: `/${oldSlug}`,
-          destination: `/case-studies/${newSlug}`,
-          statusCode: 301,
-        },
-      ]),
+      ...RETIRED_CASE_STUDY_PATHS.map((source) => ({
+        source,
+        destination: "/case-studies",
+        statusCode: 301,
+      })),
+      // The Flow Pros post came off with the client stories.
+      { source: "/blog/flow-pros-seo-sprint", destination: "/blog", statusCode: 301 },
       { source: "/about/case-studies", destination: "/case-studies", statusCode: 301 },
       { source: "/about/team", destination: "/about", statusCode: 301 },
       { source: "/topserv-digital-testimonials", destination: "/about", statusCode: 301 },

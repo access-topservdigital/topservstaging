@@ -60,9 +60,6 @@ export const PROCESS_DETAIL: ProcessDetailStep[] = [
     media: {
       kind: "videos",
       videos: [
-        { id: "r_9BXvgyCUU", label: "The Problem Solvers" },
-        { id: "Pg04bw3tYDc", label: "Flow Pros Plumbing" },
-        { id: "J2gx3z5P_HM", label: "Your New Door" },
       ],
     },
   },

@@ -66,7 +66,7 @@ const STRUCTURE = [
   { k: "Strategy", v: "What we decided to do about it, and what we decided not to do." },
   { k: "Demand creation", v: "What was built and how often it ran, across how much geography." },
   { k: "Demand capture", v: "What was set up to collect the demand once it existed." },
-  { k: "Business outcome", v: "Revenue against its starting position, with the time it took." },
+  { k: "Business outcome", v: "Growth over the life of the work, with the time it took." },
   { k: "Brand outcome", v: "Branded search, direct navigation and market recognition, reported next to the revenue rather than instead of it." },
 ];
 
@@ -77,23 +77,27 @@ export function SHero() {
         <div className="grid gap-10 lg:grid-cols-[minmax(0,44fr)_minmax(0,56fr)] lg:gap-14">
           <div>
             <Eyebrow>The proof</Eyebrow>
+            {/* HOLDING COPY. The page argued "told with the starting number
+                attached" and that the stories start where the company
+                started, which was true while each row showed a dollar
+                before and after. Revenue is no longer published, so the
+                argument no longer matches the page. Rewritten to what the
+                page now shows; the real rewrite is Alejandro's. */}
             <h1 className="display mt-5 text-[clamp(1.9rem,4.4vw,3.1rem)] leading-[1.02]">
-              Home service marketing case studies, told with the starting
-              number attached<span className="text-brand">.</span>
+              Home service marketing case studies, told with the growth
+              attached<span className="text-brand">.</span>
             </h1>
           </div>
           <div className="lg:pt-4">
             <p className="text-[0.9375rem] leading-relaxed text-muted-foreground md:text-base">
               Every agency has case studies and they all say the same thing
-              about traffic. Results are not proof. A number without a
-              starting position is not proof either: 43 percent more traffic
-              tells you nothing about whether the phone rang, or what the
-              company looked like before anybody touched it.
+              about traffic. Results are not proof: 43 percent more traffic
+              tells you nothing about whether the phone rang.
             </p>
             <p className="mt-5 text-[0.9375rem] leading-relaxed text-muted-foreground md:text-base">
-              So every story here starts where the company started. Same 7
-              parts, same order, every time, which is what makes 1 of them
-              comparable to the next and to your own business.
+              So every story here is growth over the life of the work rather
+              than a campaign window, and only companies whose numbers we can
+              source appear at all.
             </p>
           </div>
         </div>
@@ -102,13 +106,13 @@ export function SHero() {
   );
 }
 
-/** The Proof beat: 6 outcomes, each with its starting position. */
+/** The Proof beat: the outcomes that can be sourced, as growth. */
 export function SResults() {
   return (
     <section aria-labelledby="s-results-heading" className="border-b border-border bg-background">
       <Shell className="py-16 md:py-20">
         <div className="max-w-[46rem]">
-          <Eyebrow>6 companies</Eyebrow>
+          <Eyebrow>The stories we can source</Eyebrow>
           <h2
             id="s-results-heading"
             className="display mt-5 text-[clamp(1.6rem,2.8vw,2.4rem)] leading-[1.02]"

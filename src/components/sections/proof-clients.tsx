@@ -7,14 +7,10 @@ import {
 } from "@/lib/bf-content";
 
 /**
- * The 6 client results the spec names. Real numbers, no vanity metrics.
+ * The client stories, as cards.
  *
- * NAMES. Build Spec v2 section 15, Decision 1 is open: which of the 6 clients
- * can be named publicly is Ryan and JB's call and has not been made. So the
- * card carries market plus outcome only, which is the Argument Spine's
- * documented fallback, and the same treatment the programs page growth
- * diagram already uses. The names live in bf-content.ts and appear here only
- * once namesCleared flips.
+ * Whatever sixClients holds, which is 1 row now rather than 6, with the
+ * growth figure as the result and no dollars anywhere. See the note there.
  */
 export function ProofClients() {
   return (
@@ -29,7 +25,6 @@ export function ProofClients() {
                   {namesCleared ? c.client : anonymousClient}
                 </span>
                 <span className="mt-1 text-3xl font-bold text-brand">{c.result}</span>
-                <span className="text-sm text-muted-foreground">{c.detail}</span>
               </div>
             </Reveal>
           </li>

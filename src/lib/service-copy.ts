@@ -76,7 +76,7 @@ export const serviceCopy: Record<string, ServiceCopy> = {
       {
         question: "How long does SEO take for a home service company?",
         answer:
-          "Meaningful movement typically shows in three to six months, and it compounds from there. Flow Pros Plumbing went from roughly 1,000 to over 136,500 monthly website visits in five months of TopServ's SEO and content program, with domain authority up from 21 to 35.",
+          "Meaningful movement typically shows in three to six months, and it compounds from there.",
       },
       {
         question: "What's included in TopServ's SEO service?",

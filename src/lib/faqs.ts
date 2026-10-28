@@ -50,7 +50,7 @@ export const generalFaqs: Faq[] = [
   {
     question: "How long until we see results?",
     answer:
-      "Paid channels like Google Ads and Local Services Ads can produce booked jobs within weeks. Brand equity compounds over months: as more people search the company by name, lead quality rises and cost per booked call falls. Flow Pros Plumbing went from roughly 1,000 to over 136,500 monthly website visits in 5 months of SEO and content work. Every engagement reports both.",
+      "Paid channels like Google Ads and Local Services Ads can produce booked jobs within weeks. Brand equity compounds over months: as more people search the company by name, lead quality rises and cost per booked call falls. Every engagement reports both.",
   },
 ];
 

@@ -23,14 +23,6 @@ const DIR = "/videos/portfolio";
 
 export const PORTFOLIO_FILMS: PortfolioFilm[] = [
   {
-    name: "Why Our Customers Keep Coming Back",
-    client: "Flow Pros Plumbing",
-    teaser: `${DIR}/Flow-Pros-Vidoe-Customer.mp4`,
-    poster: `${DIR}/film-_l9EU1eXza4.jpg`,
-    youtubeId: "_l9EU1eXza4",
-    uploadDate: "2024-12-23",
-  },
-  {
     name: "45 Years of Trust",
     client: "Chisholm Plumbing, Heating & Air",
     teaser: `${DIR}/Chisholm-Story-Brand.mp4`,

@@ -8,9 +8,9 @@ import { JbVideoFigure } from "@/components/video/jb-video-figure";
 import { caseStudyFilmsCleared, heldForNameClearance } from "@/lib/jb-videos";
 
 export const metadata: Metadata = {
-  title: "Case Studies — Real Numbers From Real Clients",
+  title: "Case Studies: Client Stories From TopServ Digital",
   description:
-    "TopServ Digital case studies with actual data: Flow Pros Plumbing's 1,000 → 136,500 monthly visits in five months, All Heart's million-dollar months, and more.",
+    "Client stories from TopServ Digital: the work, the market, and the growth it produced for home service companies.",
   alternates: { canonical: "/case-studies" },
 };
 
@@ -39,45 +39,47 @@ export default function CaseStudiesPage() {
         </div>
       </section>
 
-      <section aria-label="All case studies">
-        <div className="mx-auto max-w-6xl px-5 py-14">
-          <ul className="grid gap-5">
-            {caseStudies.map((study, i) => (
-              <li key={study.slug}>
-                <Reveal delay={Math.min(i * 0.06, 0.2)}>
-                  <Link
-                    href={`/case-studies/${study.slug}`}
-                    className="group grid gap-6 rounded-lg border border-border bg-card p-7 transition-colors hover:border-brand md:grid-cols-[1.5fr_1fr] md:p-8"
-                  >
-                    <div>
-                      <p className="label-mono text-muted-foreground">
-                        {study.client} · {study.trade}
-                        {study.location ? ` · ${study.location}` : ""}
-                      </p>
-                      <h2 className="display mt-3 text-3xl leading-tight">{study.headline}</h2>
-                      <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">
-                        {study.problem}
-                      </p>
-                      <span className="label-mono mt-5 inline-flex items-center gap-2 text-brand">
-                        Read the case study
-                        <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-1" aria-hidden />
-                      </span>
-                    </div>
-                    <dl className="grid content-center gap-5 border-t border-border pt-6 md:border-l md:border-t-0 md:pl-8 md:pt-0">
-                      {study.stats.map((stat) => (
-                        <div key={stat.label} className="flex flex-col-reverse">
-                          <dt className="mt-0.5 text-sm text-muted-foreground">{stat.label}</dt>
-                          <dd className="display text-3xl text-brand">{stat.value}</dd>
-                        </div>
-                      ))}
-                    </dl>
-                  </Link>
-                </Reveal>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
+      {caseStudies.length > 0 && (
+        <section aria-label="All case studies">
+          <div className="mx-auto max-w-6xl px-5 py-14">
+            <ul className="grid gap-5">
+              {caseStudies.map((study, i) => (
+                <li key={study.slug}>
+                  <Reveal delay={Math.min(i * 0.06, 0.2)}>
+                    <Link
+                      href={`/case-studies/${study.slug}`}
+                      className="group grid gap-6 rounded-lg border border-border bg-card p-7 transition-colors hover:border-brand md:grid-cols-[1.5fr_1fr] md:p-8"
+                    >
+                      <div>
+                        <p className="label-mono text-muted-foreground">
+                          {study.client} · {study.trade}
+                          {study.location ? ` · ${study.location}` : ""}
+                        </p>
+                        <h2 className="display mt-3 text-3xl leading-tight">{study.headline}</h2>
+                        <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">
+                          {study.problem}
+                        </p>
+                        <span className="label-mono mt-5 inline-flex items-center gap-2 text-brand">
+                          Read the case study
+                          <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-1" aria-hidden />
+                        </span>
+                      </div>
+                      <dl className="grid content-center gap-5 border-t border-border pt-6 md:border-l md:border-t-0 md:pl-8 md:pt-0">
+                        {study.stats.map((stat) => (
+                          <div key={stat.label} className="flex flex-col-reverse">
+                            <dt className="mt-0.5 text-sm text-muted-foreground">{stat.label}</dt>
+                            <dd className="display text-3xl text-brand">{stat.value}</dd>
+                          </div>
+                        ))}
+                      </dl>
+                    </Link>
+                  </Reveal>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
       {/* The case study films.
           GATED, NOT LIVE. Both name a client on camera and wait on the same
           decision namesCleared is waiting on, so caseStudyFilmsCleared in

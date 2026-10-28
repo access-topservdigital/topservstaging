@@ -24,20 +24,10 @@ export interface VideoTestimonial {
 // The original homepage's "Partner love" section: on-camera testimonials
 // hosted on TopServ's own YouTube channel (IDs verified live Aug 2026).
 export const videoTestimonials: VideoTestimonial[] = [
-  {
-    name: "Dylan Rucker",
-    company: "All Heart",
-    youtubeId: "ggp0uduHS8s",
-    title: "All Heart Heating, Cooling, Plumbing - Testimonial",
-    uploadDate: "2025-07-30",
-  },
-  {
-    name: "Maddie Studstill",
-    company: "Flow Pros Plumbing",
-    youtubeId: "n7uzximDssk",
-    title: "Flow Pros Plumbing - Testimonials",
-    uploadDate: "2025-07-30",
-  },
+  // Empty since October 2026. Both films were former clients, Dylan Rucker of
+  // All Heart and Maddie Studstill of Flow Pros Plumbing, and former clients
+  // come off the site. The section that rendered them is also switched off by
+  // homeProofSections.videoTestimonials.
 ];
 
 export interface Partner {
@@ -56,9 +46,6 @@ export interface Partner {
 export const partners: Partner[] = [
   { file: "eagle-point-sm.webp", name: "EaglePoint" },
   { file: "hawkins-sm.webp", name: "Hawkins" },
-  { file: "cs-air-sm.webp", name: "C&S Air" },
-  { file: "all-heart-sm.webp", name: "All Heart Heating, Cooling & Plumbing" },
-  { file: "problem-solvers-sm.webp", name: "The Problem Solvers" },
   { file: "golden-plumbing-sm.webp", name: "Golden Plumbing" },
   { file: "doggone-good-sm.webp", name: "Doggone Good" },
   { file: "mission-accomplished-sm.webp", name: "Mission Accomplished" },
@@ -83,4 +70,5 @@ export const homePartners: Partner[] = [
   { file: "spencer-sm.webp", name: "Spencer" },
   { file: "watts-right-sm.webp", name: "Watt's Right" },
   { file: "lilypad-sm.webp", name: "Lilypad" },
+  { file: "hawkins-sm.webp", name: "Hawkins" },
 ];

@@ -40,20 +40,21 @@ const CSS = `
 }
 `;
 
-/** Reads "$3.9M to $9M" and "$500K to $3.5M" off the single source. */
-function parseRange(result: string) {
-  const m = result.match(/\$([\d.]+)\s*([KM])\s+to\s+\$([\d.]+)\s*([KM])/i);
-  if (!m) return null;
-  const scale = (v: string, unit: string) =>
-    Number(v) * (unit.toUpperCase() === "K" ? 0.001 : 1);
-  return { from: scale(m[1], m[2]), to: scale(m[3], m[4]) };
+/**
+ * Reads the growth percentage off the row, "289 percent over 9 years" -> 289.
+ * Rows used to carry a dollar range and the bar was drawn from it; revenue is
+ * not published any more, so the percentage is what there is to draw.
+ */
+function parseGrowth(result: string) {
+  const m = result.match(/([\d.]+)\s*percent/i);
+  return m ? Number(m[1]) : null;
 }
 
 const ROWS = sixClients
-  .map((c) => ({ ...c, range: parseRange(c.result) }))
-  .filter((c) => c.range !== null);
+  .map((c) => ({ ...c, growth: parseGrowth(c.result) }))
+  .filter((c) => c.growth !== null);
 
-const CEILING = Math.max(...ROWS.map((r) => r.range!.to));
+const CEILING = Math.max(...ROWS.map((r) => r.growth!));
 
 const grow: Variants = {
   hidden: { scaleX: 0 },
@@ -83,24 +84,16 @@ export function GrowthBarsDiagram() {
       <style>{CSS}</style>
 
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <p className="label-mono text-ink-faint">Where each one started, and where it got to</p>
-        <p className="label-mono flex items-center gap-4 text-ink-faint">
-          <span className="flex items-center gap-2">
-            <span aria-hidden className="block h-1.5 w-5 rounded-full bg-[rgba(244,245,242,0.28)]" />
-            Starting revenue
-          </span>
-          <span className="flex items-center gap-2">
-            <span aria-hidden className="block h-1.5 w-5 rounded-full bg-brand" />
-            Where it is now
-          </span>
+        <p className="label-mono text-ink-faint">How far each one has grown</p>
+        <p className="label-mono flex items-center gap-2 text-ink-faint">
+          <span aria-hidden className="block h-1.5 w-5 rounded-full bg-brand" />
+          Growth since the work started
         </p>
       </div>
 
       <ul className="mt-6 grid gap-4">
         {ROWS.map((row, i) => {
-          const { from, to } = row.range!;
-          const fromPct = (from / CEILING) * 100;
-          const toPct = (to / CEILING) * 100;
+          const pct = (row.growth! / CEILING) * 100;
           return (
             <li key={`${row.market}-${row.result}`} className="grid gap-2">
               <motion.div
@@ -114,13 +107,9 @@ export function GrowthBarsDiagram() {
                     <span className="ml-2 font-normal text-ink-faint">{row.market}</span>
                   )}
                 </p>
-                <p className="flex flex-wrap items-baseline gap-x-3">
-                  <span className="display text-[1.0625rem] text-brand">{row.result}</span>
-                  <span className="label-mono text-[0.6875rem] text-ink-faint">{row.detail}</span>
-                </p>
+                <span className="display text-[1.0625rem] text-brand">{row.result}</span>
               </motion.div>
 
-              {/* The track. The starting position is drawn, not implied. */}
               <div
                 aria-hidden
                 className="relative h-8 overflow-hidden rounded-[9px] border border-[rgba(244,245,242,0.08)] bg-[#0b0e13]"
@@ -129,15 +118,7 @@ export function GrowthBarsDiagram() {
                   custom={i}
                   variants={grow}
                   className="absolute inset-y-0 left-0 origin-left rounded-[8px] bg-[linear-gradient(90deg,rgba(158,216,68,0.5),var(--brand))]"
-                  style={{ width: `${toPct}%` }}
-                />
-                <span
-                  className="absolute inset-y-0 left-0 rounded-l-[8px] bg-[rgba(244,245,242,0.16)]"
-                  style={{ width: `${fromPct}%` }}
-                />
-                <span
-                  className="dgb-tip absolute inset-y-0 w-px bg-[rgba(244,245,242,0.55)]"
-                  style={{ left: `${fromPct}%` }}
+                  style={{ width: `${pct}%` }}
                 />
               </div>
             </li>
@@ -146,9 +127,9 @@ export function GrowthBarsDiagram() {
       </ul>
 
       <figcaption className="mt-6 border-t border-[rgba(244,245,242,0.08)] pt-5 text-[0.9375rem] leading-relaxed text-muted-foreground">
-        Each bar starts where the company actually started. That is the part
-        most case studies leave out, and it is the only part that makes the
-        second number mean anything.
+        Growth over the life of the work, not a campaign window. Revenue
+        figures are a client&apos;s to publish, not ours, so what is shown here is
+        how far each business moved.
         {!namesCleared && (
           <span className="mt-2 block text-ink-faint">
             Markets and outcomes are published here. {namesWithheldNote}

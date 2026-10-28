@@ -208,8 +208,8 @@ export default function HomePage() {
               Companies that stopped renting attention.
             </h2>
             <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              Revenue before and after, in the markets where the work ran.
-              These are multi year outcomes, not campaign snapshots.
+              Business growth, in the markets where the work ran. These are
+              multi year outcomes, not campaign snapshots.
             </p>
           </Reveal>
 
