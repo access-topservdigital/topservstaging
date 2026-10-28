@@ -44,9 +44,9 @@ type State = "done" | "next" | "ahead";
 const STEPS: { n: number; k: string; where: string; state: State }[] = [
   { n: 1, k: "Discover BrandFormance", where: "Home, BrandFormance, Method", state: "done" },
   { n: 2, k: "Understand the program", where: "These 5 pages", state: "done" },
-  { n: 3, k: "Get your Brand Grade", where: "The Brand Assessment. A grade, not a number.", state: "next" },
+  { n: 3, k: "Get My Brand Grade", where: "The Brand Assessment. A grade, not a number.", state: "next" },
   { n: 4, k: "Get your assessment", where: "Booking. The research modules run.", state: "ahead" },
-  { n: 5, k: "Build your plan", where: "The strategy call, where the plan is presented.", state: "ahead" },
+  { n: 5, k: "Build your plan", where: "The BrandFormance Call, where the plan is presented.", state: "ahead" },
 ];
 
 const row: Variants = {

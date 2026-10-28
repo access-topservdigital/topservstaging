@@ -1,15 +1,19 @@
 "use client";
 
 import Link from "next/link";
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import {
   AnimatePresence,
+  animate,
   motion,
+  useInView,
+  useReducedMotion,
   type Variants,
 } from "motion/react";
 import { Button } from "@/components/ui/button";
 import { EcosystemOrbit } from "@/components/sections/ecosystem-orbit";
+import { siteConfig } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 
 const EASE_OUT = [0.22, 1, 0.36, 1] as const;
@@ -99,6 +103,13 @@ function TradeRotor() {
   );
 }
 
+// 3 figures came off for launch: 200+ home service clients, $89M+ client
+// revenue generated, 50+ certified professionals. They go back when each has
+// a source; the values are parked in site-config. Years in the trades stays,
+// because it follows from the founding year the site states anyway.
+const STATS = [
+  { prefix: "", value: siteConfig.stats.yearsInBusiness, suffix: "", label: "years in the trades" },
+] as const;
 
 /**
  * Count-up stat. Final value is server-rendered (crawlers and no-JS visitors
@@ -107,18 +118,48 @@ function TradeRotor() {
  * counting begins as the row becomes visible (not at page load), staggered
  * per stat so the four numbers roll in sequence.
  */
-/**
- * The stats band is off for launch.
- *
- * It carried 200+ home service clients, $89M+ client revenue generated, 50+
- * certified professionals and years in the trades. The first 3 have no
- * source behind them yet and came off first; the band itself came off with
- * them rather than running as a single number under a full width rule.
- *
- * To bring it back, git show checkpoint/2026-10-28-stats-withheld has the
- * whole thing: the STATS list, the markup, and the StatValue count-up that
- * animated each number into view.
- */
+function StatValue({
+  prefix,
+  value,
+  suffix,
+  index,
+}: {
+  prefix: string;
+  value: number;
+  suffix: string;
+  index: number;
+}) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const inView = useInView(ref, { once: true, margin: "-40px" });
+  const reduceMotion = useReducedMotion();
+
+  useEffect(() => {
+    if (!inView || reduceMotion || !ref.current) return;
+    // Zero out immediately so the delayed start counts up from 0 instead of
+    // flashing the final value first.
+    ref.current.textContent = `${prefix}0${suffix}`;
+    const controls = animate(0, value, {
+      duration: 1.8,
+      delay: 0.75 + index * 0.18,
+      ease: EASE_OUT,
+      onUpdate: (v) => {
+        if (ref.current) {
+          ref.current.textContent = `${prefix}${Math.round(v)}${suffix}`;
+        }
+      },
+    });
+    return () => controls.stop();
+  }, [inView, reduceMotion, value, prefix, suffix, index]);
+
+  return (
+    <span ref={ref}>
+      {prefix}
+      {value}
+      {suffix}
+    </span>
+  );
+}
+
 export function Hero() {
   return (
     <section className="relative overflow-hidden border-b border-border">
@@ -203,6 +244,27 @@ export function Hero() {
         </motion.div>
         </div>
 
+        <motion.dl
+          variants={fadeUp}
+          // Flex rather than a 4 column grid: the row holds 1 stat today and
+          // 4 again once the withheld figures are sourced, and a fixed column
+          // count would leave 3 empty cells in the meantime.
+          className="mt-16 flex flex-wrap gap-x-14 gap-y-6 border-t border-border pt-8"
+        >
+          {STATS.map((stat, i) => (
+            <div key={stat.label}>
+              <dt className="label-mono order-2 text-muted-foreground">{stat.label}</dt>
+              <dd className="display text-4xl text-foreground md:text-5xl">
+                <StatValue
+                  prefix={stat.prefix}
+                  value={stat.value}
+                  suffix={stat.suffix}
+                  index={i}
+                />
+              </dd>
+            </div>
+          ))}
+        </motion.dl>
       </motion.div>
     </section>
   );
