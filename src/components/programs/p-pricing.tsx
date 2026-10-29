@@ -3,6 +3,7 @@ import {
   ArrowRight,
   BarChart3,
   Eye,
+  Laptop,
   Monitor,
   Search,
   Star,
@@ -231,19 +232,32 @@ export function PActivation() {
             aria-hidden
             className="pointer-events-none absolute inset-0 bg-[radial-gradient(80%_60%_at_10%_0%,rgba(158,216,68,0.14),transparent_66%)]"
           />
-          <h2
-            id="p-activation-heading"
-            className="display relative text-[clamp(1.75rem,4vw,2.75rem)] leading-[1.02]"
-          >
-            <span className="text-brand">{pricingModel.activation}</span>{" "}
-            one time activation
-          </h2>
-          <p className="relative mt-5 max-w-[66ch] text-[1.0625rem] leading-relaxed text-muted-foreground md:text-lg">
-            {pricingModel.activationLine}
-          </p>
-          <p className="relative mt-4 max-w-[66ch] text-[0.9375rem] leading-relaxed text-ink-faint">
-            {pricingModel.billingLine} {pricingModel.advertisingLine}
-          </p>
+          <div className="relative md:flex md:items-center md:gap-10 lg:gap-14">
+            <div
+              aria-hidden
+              className="mb-7 flex items-center gap-7 md:mb-0 md:shrink-0 md:gap-8"
+            >
+              <Laptop className="size-14 text-brand lg:size-16" strokeWidth={1.1} />
+              <span className="block h-14 w-px bg-brand/30 lg:h-16" />
+              <Video className="size-14 text-brand lg:size-16" strokeWidth={1.1} />
+            </div>
+
+            <div>
+              <h2
+                id="p-activation-heading"
+                className="display text-[clamp(1.75rem,4vw,2.75rem)] leading-[1.02]"
+              >
+                <span className="text-brand">{pricingModel.activation}</span>{" "}
+                one time activation
+              </h2>
+              <p className="mt-5 max-w-[66ch] text-[1.0625rem] leading-relaxed text-muted-foreground md:text-lg">
+                {pricingModel.activationLine}
+              </p>
+              <p className="mt-4 max-w-[66ch] text-[0.9375rem] leading-relaxed text-ink-faint">
+                {pricingModel.billingLine} {pricingModel.advertisingLine}
+              </p>
+            </div>
+          </div>
         </div>
 
         <div className="mt-14 text-center">
@@ -253,15 +267,15 @@ export function PActivation() {
           </h2>
         </div>
 
-        <ul className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-[18px] border border-[#2b323c] bg-[#2b323c] sm:grid-cols-3 lg:grid-cols-5">
+        <ul className="mx-auto mt-10 grid max-w-[64rem] grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
           {pricingModel.scope.map((item, i) => {
             const Icon = SCOPE_ICONS[i];
             return (
               <li
                 key={item}
-                className="flex flex-col items-center gap-3 bg-[#0d1015] px-4 py-7 text-center"
+                className="flex flex-col items-center gap-3.5 border-[rgba(244,245,242,0.12)] px-4 py-6 text-center [&:not(:first-child)]:border-l"
               >
-                <Icon className="size-6 text-brand" aria-hidden />
+                <Icon className="size-6 text-foreground" aria-hidden />
                 <span className="text-[0.875rem] font-semibold leading-snug text-foreground">
                   {item}
                 </span>
@@ -359,87 +373,73 @@ export function PPerformance() {
   );
 }
 
-/** The worked example, labelled illustrative everywhere it is shown. */
+/**
+ * The worked example, laid out as the mockup lays it out: the 4 categories
+ * across, the achievement big, and what it earned against what it had
+ * available under it. The mockup drops the per category available amounts;
+ * they are kept here as "of $3,600" because without them the earned figure
+ * is a number with nothing to measure it by, and the handoff's own table
+ * publishes them.
+ *
+ * Labelled illustrative in 2 places, because the percentages are
+ * achievement against agreed targets and read as traffic growth otherwise.
+ */
 export function PExample() {
   const { example } = pricingModel;
   return (
     <section aria-labelledby="p-example-heading" className="border-b border-border bg-background">
       <Shell className="py-16 md:py-20">
-        <div className={`${CARD} overflow-hidden`}>
-          <div className="flex flex-wrap items-baseline justify-between gap-3 border-b border-[rgba(244,245,242,0.09)] px-6 py-5 md:px-8">
+        <div className={`${CARD} px-6 py-7 md:px-10 md:py-9`}>
+          <div className="flex flex-wrap items-baseline justify-between gap-3">
             <h2 id="p-example-heading" className="label-mono text-brand">
               What earning it looks like
             </h2>
             <p className="text-[0.8125rem] text-ink-faint">{example.label}</p>
           </div>
 
-          <div className="overflow-x-auto">
-            <table className="w-full min-w-[34rem] border-collapse text-left">
-              <caption className="sr-only">
-                An illustrative quarter for Program 3: achievement against
-                agreed targets, what each category had available, and what it
-                earned.
-              </caption>
-              <thead>
-                <tr className="border-b border-[rgba(244,245,242,0.09)]">
-                  <th scope="col" className="px-6 py-4 text-[0.8125rem] font-semibold text-ink-faint md:px-8">
-                    Category
-                  </th>
-                  <th scope="col" className="px-6 py-4 text-[0.8125rem] font-semibold text-ink-faint">
-                    Achievement
-                  </th>
-                  <th scope="col" className="px-6 py-4 text-[0.8125rem] font-semibold text-ink-faint">
-                    Available
-                  </th>
-                  <th scope="col" className="px-6 py-4 text-right text-[0.8125rem] font-semibold text-ink-faint md:px-8">
-                    Earned
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {example.rows.map((r) => (
-                  <tr key={r.category} className="border-b border-[rgba(244,245,242,0.09)]">
-                    <th scope="row" className="px-6 py-5 text-[0.9375rem] font-semibold text-foreground md:px-8">
-                      {r.category}
-                    </th>
-                    <td className="px-6 py-5 text-[0.9375rem] text-muted-foreground">
-                      {r.achievement}
-                    </td>
-                    <td className="px-6 py-5 text-[0.9375rem] text-muted-foreground">
-                      {r.available}
-                    </td>
-                    <td className="px-6 py-5 text-right text-[0.9375rem] font-semibold text-foreground md:px-8">
-                      {r.earned}
-                    </td>
-                  </tr>
-                ))}
-                <tr>
-                  <th scope="row" className="px-6 py-5 text-[0.9375rem] font-semibold text-foreground md:px-8">
-                    Total
-                  </th>
-                  <td />
-                  <td className="px-6 py-5 text-[0.9375rem] text-muted-foreground">
-                    Up to {example.availableTotal}
-                  </td>
-                  <td className="display px-6 py-5 text-right text-[1.5rem] leading-none text-brand md:px-8">
-                    {example.earnedTotal}
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <ul className="mt-8 grid grid-cols-2 lg:grid-cols-4">
+            {example.rows.map((r, i) => (
+              <li
+                key={r.category}
+                className={`border-[rgba(244,245,242,0.12)] px-3 py-5 text-center lg:py-2 ${
+                  i % 2 === 1 ? "border-l" : ""
+                } ${i > 1 ? "border-t lg:border-t-0" : ""} lg:[&:not(:first-child)]:border-l`}
+              >
+                <p className="text-[0.875rem] text-muted-foreground">
+                  {r.category}
+                </p>
+                <p className="display mt-2 text-[clamp(2rem,4.4vw,2.75rem)] leading-none">
+                  {r.achievement}
+                  <span className="sr-only"> achievement</span>
+                </p>
+                <p className="mt-2 text-[0.9375rem] text-muted-foreground">
+                  {r.earned}{" "}
+                  <span className="text-ink-faint">of {r.available}</span>
+                  <span className="sr-only"> earned</span>
+                </p>
+              </li>
+            ))}
+          </ul>
 
-          <div className="border-t border-[rgba(244,245,242,0.09)] px-6 py-6 md:px-8">
-            <p className="text-[0.9375rem] font-semibold text-foreground">
-              Earned quarterly Performance Pay: {example.earnedTotal} of{" "}
-              {example.availableTotal}. {example.note}
-            </p>
-            <p className="mt-3 max-w-[72ch] text-[0.8125rem] leading-relaxed text-ink-faint">
-              {example.fullPeriod} Results require usable evidence and mutual
-              approval. The percentages are achievement against agreed
-              targets, not traffic growth and not survey ratings.
-            </p>
-          </div>
+          <span
+            aria-hidden
+            className="mt-7 block h-px w-full bg-[rgba(244,245,242,0.12)]"
+          />
+
+          <p className="mt-7 text-center text-[1.0625rem] font-semibold text-foreground md:text-[1.25rem]">
+            Earned quarterly Performance Pay:{" "}
+            <span className="display text-brand">
+              {example.earnedTotal} of {example.availableTotal}
+            </span>
+          </p>
+          <p className="mt-2 text-center text-[0.875rem] text-muted-foreground">
+            {example.note}
+          </p>
+          <p className="mx-auto mt-5 max-w-[76ch] text-center text-[0.8125rem] leading-relaxed text-ink-faint">
+            {example.fullPeriod} Results require usable evidence and mutual
+            approval. The percentages are achievement against agreed targets,
+            not traffic growth and not survey ratings.
+          </p>
         </div>
       </Shell>
     </section>
@@ -484,28 +484,34 @@ export function PPricingProof() {
 /**
  * The pricing FAQs, every answer in the HTML rather than behind a toggle.
  * Same source as the FAQPage schema the page emits, so the 2 cannot drift.
+ *
+ * The mockup labels this block "FAQ" and goes straight into the questions
+ * with no heading over them, and the 2 columns are divided by a rule rather
+ * than boxed. The heading is still in the document for the outline, just
+ * not on screen: a section of 8 questions with nothing above it in the
+ * heading tree is a worse page for anyone navigating by headings.
  */
 export function PPricingFaq() {
   return (
     <section aria-labelledby="p-pricing-faq-heading" className="border-b border-border bg-background">
       <Shell className="py-16 md:py-20">
-        <div className="max-w-[46rem]">
-          <Eyebrow>FAQ</Eyebrow>
-          <h2
-            id="p-pricing-faq-heading"
-            className="display mt-5 text-[clamp(1.6rem,2.8vw,2.4rem)] leading-[1.02]"
-          >
-            What people ask before the call.
-          </h2>
-        </div>
+        <p className="label-mono text-brand">FAQ</p>
+        <h2 id="p-pricing-faq-heading" className="sr-only">
+          Pricing questions
+        </h2>
 
-        <dl className="mt-10 grid gap-x-10 gap-y-8 md:grid-cols-2">
-          {pricingFaqs.map((f) => (
-            <div key={f.question} className="border-t border-[rgba(244,245,242,0.09)] pt-6">
-              <dt className="text-[1.0625rem] font-semibold leading-snug text-foreground">
+        <dl className="mt-8 grid md:grid-cols-2">
+          {pricingFaqs.map((f, i) => (
+            <div
+              key={f.question}
+              className={`border-[rgba(244,245,242,0.12)] py-7 md:px-9 md:first:pl-0 md:[&:nth-child(2)]:pr-0 ${
+                i > 1 ? "border-t" : ""
+              } md:[&:nth-child(odd)]:pl-0 md:[&:nth-child(even)]:border-l md:[&:nth-child(even)]:pr-0`}
+            >
+              <dt className="text-[1.0625rem] font-semibold leading-snug text-foreground md:text-[1.125rem]">
                 {f.question}
               </dt>
-              <dd className="mt-3 max-w-[58ch] text-[0.9375rem] leading-relaxed text-muted-foreground">
+              <dd className="mt-3 max-w-[56ch] text-[0.9375rem] leading-relaxed text-muted-foreground">
                 {f.answer}
               </dd>
             </div>
