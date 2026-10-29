@@ -25,6 +25,8 @@ For the team continuing this build, primarily Shaw (design and front-end owner).
 | Alex | Brand Assessment and the internal scoring engine, the agentic layer, Agency Titan integration, data layer, hosting architecture |
 | Video team | Filming, editing, thumbnails, hosting, delivery |
 
+The chat concierge is part of Alex's agentic layer, including `CONCIERGE-PROMPT.md`. That file has drifted: it still carries the retired $1,000/week offer and the 3 withheld stats, and its own header calls it a generated file although no generator exists in the repo. **The running agent is not affected.** `src/lib/concierge.ts` composes its facts at runtime from `bf-content.ts`, `faqs.ts` and `site-config.ts`, all of which carry the approved October 2026 offer, so the bot quotes the right numbers today. The risk is only that someone pastes the stale document into `/admin/agent` and overrides a correct prompt with a wrong one. Alex's call, not the site team's.
+
 The clean line from the spec: Alejandro and Shaw own the marketing site; Alex owns anything that touches the client data object. The Brand Assessment sits on that boundary and belongs to Alex: the internal scoring engine must stay identical to the sales console version, and the public site only ever shows the grade.
 
 ## The open decisions (spec v2)
