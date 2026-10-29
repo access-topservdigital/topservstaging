@@ -9,7 +9,10 @@ import { TrackPageview } from "@/components/analytics/track-pageview";
 import { MotionProvider } from "@/components/motion/motion-provider";
 import { ContentSlot } from "@/components/content/content-slot";
 import { SiteGraphJsonLd } from "@/components/seo/json-ld";
-import { TagManager, TagManagerNoScript } from "@/components/analytics/tag-manager";
+import {
+  TagManagerGate,
+  TagManagerNoScriptGate,
+} from "@/components/analytics/tag-manager-gate";
 import { ConsentDefault } from "@/components/analytics/consent-default";
 
 const barlow = Barlow({
@@ -72,7 +75,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="flex min-h-full flex-col bg-background font-sans text-foreground">
         {/* Consent defaults first, before anything can read them. */}
         <ConsentDefault />
-        <TagManagerNoScript />
+        <TagManagerNoScriptGate />
         {/* The company and the site, on every page. Every Service, Article
             and VideoObject node elsewhere references these @ids, and a
             reference only resolves if the node is in the same page's graph.
@@ -93,7 +96,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <Footer />
           <ChatWidgetLazy />
           <TrackPageview />
-          <TagManager />
+          <TagManagerGate />
         </MotionProvider>
       </body>
     </html>
