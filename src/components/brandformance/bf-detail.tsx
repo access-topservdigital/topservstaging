@@ -15,15 +15,16 @@ import { Eyebrow, Shell } from "@/components/brandformance/bf-grid";
  *                    Argument Spine, which the page was missing.
  *   The first year   threePhases, Build Spec v2 section 4. Answer 09
  *                    summarises this in 1 sentence; this is the detail.
- *   What sets it     Build Spec v2 section 4, Programs page 4, the "What
- *                    sets the number" row, verbatim list.
+ *   What sets it     The 4 recommendation factors from Jonathan's Pricing
+ *                    Page Developer Handoff, read from pricingModel so this
+ *                    page cannot drift from the Pricing page.
  *
- * NO FIGURES, DELIBERATELY, AND A CONFLICT TO RAISE. KEYWORD-RESEARCH 4.2
- * says the cost answer here should state the floor. SEO-GUIDELINES 1.3 says
- * the floor and the activation "may appear only where the Pricing page spec
- * places them". The tighter rule wins until somebody rules otherwise, so
- * this section names what moves the price and links to Pricing without
- * printing either anchor. Alejandro should settle it.
+ * NO FIGURES, DELIBERATELY. The handoff puts the programs, the caps and the
+ * activation on /programs-pricing/pricing and nowhere else, so this section
+ * names what moves the recommendation and links there rather than restating
+ * a number that would then exist in 2 places. The older conflict here, over
+ * whether the retired weekly floor could be printed on this page, closed
+ * with the offer it belonged to.
  */
 
 const CARD = "rounded-[14px] border border-[#2b323c] bg-[#0b0e13] p-5";
