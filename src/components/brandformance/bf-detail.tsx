@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { beforeAfter, threePhases } from "@/lib/bf-content";
+import { beforeAfter, pricingModel, threePhases } from "@/lib/bf-content";
 import { Eyebrow, Shell } from "@/components/brandformance/bf-grid";
 
 /**
@@ -124,13 +124,11 @@ export function BfPhases() {
 }
 
 /** Build Spec v2 section 4, Programs page 4, "What sets the number". */
-const SETS = [
-  "Market size",
-  "Competitive saturation",
-  "Current brand position",
-  "Service area",
-  "Video scope",
-];
+// The handoff's 4 recommendation factors, read from the 1 shared
+// configuration rather than retyped. The 5 older scope inputs (market size,
+// competitive saturation, current brand position, service area, video
+// scope) retired with the weekly floor they priced.
+const SETS = pricingModel.fitFactors.map((f) => f.name);
 
 export function BfCost() {
   return (
@@ -149,13 +147,13 @@ export function BfCost() {
 
           <div>
             <p className="max-w-[64ch] text-[1rem] leading-relaxed text-muted-foreground md:text-[1.0625rem]">
-              There is no price table, and that is deliberate. A published tier
-              invites a company to pick one before anybody has diagnosed
-              anything, which is the exact behavior the assessment exists to
-              prevent. It is also why the brand marketing vs performance
-              marketing split cannot be priced from a menu: the balance between
-              the 2 halves is different in every market. The assessment produces
-              the scope. The scope produces the price. 5 things move it:
+              There are 3 programs and we publish all of them. What you do not
+              do is pick one, because the level reflects the resources your plan
+              requires rather than a bigger pile of deliverables. It is also why
+              the brand marketing vs performance marketing split cannot be
+              chosen off a menu: the balance between the 2 halves is different
+              in every market. The assessment produces the scope. The scope
+              produces the recommendation. 4 things move it:
             </p>
 
             <ul className="mt-7 flex flex-wrap gap-2.5">
@@ -178,7 +176,7 @@ export function BfCost() {
               >
                 How the program is priced
               </Link>{" "}
-              sets out the floor and what it covers.
+              publishes all 3 programs, the activation and what it covers.
             </p>
           </div>
         </div>

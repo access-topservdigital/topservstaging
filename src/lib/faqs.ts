@@ -6,16 +6,18 @@ export interface Faq {
 // Answers are written as self-contained 40–70 word passages an AI system can
 // quote without surrounding context, each one stands alone. These render on
 // the site AND feed the chat concierge's knowledge block, so they must match
-// the BrandFormance build spec v2: no price table, the $1,000/week floor and
-// $10,000 activation are the only public numbers (never monthly, never
-// annual), the activation is never called a fee, the Brand Assessment returns
-// a grade only, and the 6 stage Method is the system.
+// the approved offer and the doctrine around it: the 3 program bases, the
+// quarterly Performance Pay cap and the $15,000 activation exactly as
+// pricingModel in bf-content.ts states them, advertising always named as
+// separate, never a 60/40 or 50/50 split and never a guaranteed result, the
+// Brand Assessment returning a grade only, and the 6 stage Method as the
+// system. The $1,000 weekly floor and the $10,000 activation are retired.
 
 export const generalFaqs: Faq[] = [
   {
     question: "What makes TopServ Digital different from other marketing agencies?",
     answer:
-      "TopServ Digital is the home of BrandFormance: brand building and performance marketing run as 1 system, instead of choosing between brand or leads. The agency has worked exclusively with home service companies since 2016, publishes its pricing anchor openly ($1,000 per week floor, $10,000 one time activation).",
+      "TopServ Digital is the home of BrandFormance: brand building and performance marketing run as 1 system, instead of choosing between brand or leads. The agency has worked exclusively with home service companies since 2016, and publishes its programs openly: monthly bases of $3,000, $5,000 or $8,000, quarterly Performance Pay we have to earn, and a $15,000 one time activation.",
   },
   {
     question: "What is BrandFormance?",
@@ -45,7 +47,7 @@ export const generalFaqs: Faq[] = [
   {
     question: "How much does TopServ Digital cost?",
     answer:
-      "Programs start at $1,000 per week. That is the floor rate to manage the work, not a menu price. Every program begins with a one time $10,000 activation in month 1 that covers the 2 day video shoot, travel, and the first month of build; weekly billing starts in month 2. The actual number comes from your scope: market size, competitive saturation, current brand position, service area, and video scope. The assessment produces the scope, and the scope produces the price.",
+      "There are 3 BrandFormance programs, with monthly bases of $3,000, $5,000 and $8,000 beginning in month 2. Performance Pay is additional, earned and billed quarterly, up to $6,000, $9,000 or $12,000 per quarter by program. Activation is $15,000 once and includes your first month. Advertising spend is separate. Which program fits comes from your market, competition, current brand equity and growth goals.",
   },
   {
     question: "How long until we see results?",
@@ -56,28 +58,43 @@ export const generalFaqs: Faq[] = [
 
 export const pricingFaqs: Faq[] = [
   {
-    question: "Why does TopServ Digital publish its pricing?",
+    question: "What will I pay each month?",
     answer:
-      "Three reasons: clarity saves everyone time, published numbers attract the right-fit clients and filter the wrong ones, and trust drives results, it's hard to ask contractors for transparency in a partnership while hiding your own prices. Most agencies in the home services space don't publish pricing; TopServ does.",
+      "Your recommended program has a monthly base of $3,000, $5,000 or $8,000, beginning in month 2. Performance Pay is additional, earned and billed quarterly. Activation is $15,000 once and includes your first month. Advertising is separate.",
   },
   {
-    question: "Why is pricing billed weekly instead of monthly?",
+    question: "How is Performance Pay earned?",
     answer:
-      "Weekly billing matches how the work actually runs: brand advertising is bought at a weekly frequency floor, content ships weekly, and reporting runs against weekly delivery. It also keeps the number honest, a year is 52 weeks, and quoting weekly means the figure is true from the first conversation.",
+      "We agree on targets and measurement rules before the performance period. Each of 4 categories earns independently: below 60% achievement earns nothing for that category, and at 60% or above we earn that percentage of its available payment. Both parties verify and approve the quarterly calculation.",
   },
   {
-    question: "Why don't you publish a price table?",
+    question: "What does activation include?",
     answer:
-      "Because a table invites you to pick a tier before anyone has diagnosed anything, and it fixes a price against a scope nobody has seen. No 2 clients in the same market price the same. We publish the honest anchor instead: the $1,000 per week floor and the one time $10,000 activation. Your scope sets your number, and the assessment sets the scope.",
+      "Your first month of service, website build and initial video production, including strategy, scripting, planning, filming, travel, lodging and editing. The initial shoot is 2 days, with a 3rd included if needed as determined by TopServ. Further shoots require separate written pricing.",
   },
   {
-    question: "Which program is right for my company?",
+    question: "Is advertising included?",
     answer:
-      "You don't self-select, and that's a feature. The Brand Assessment reads your market and returns your grade; the full assessment then produces your scope, and the program is assigned by diagnosis. What a larger program buys is more geography held at the same brand frequency, never more impressions. Frequency is fixed at the floor of 3 times weekly for everyone; territory is the variable.",
+      "Advertising is a separate, approved budget. BrandFormance requires funding for at least 3.0 average weekly exposures per reached audience member on the designated primary platform, alongside agreed reach. We size the territory to a sustainable budget, and frequency is not identical exposure to every homeowner.",
   },
   {
-    question: "Why is there a $10,000 activation?",
+    question: "Why not choose the lowest program?",
     answer:
-      "The activation funds the 2 day on-site video shoot that rebuilds your entire content library, plus travel, the pre-shoot strategy build, editing, and the first month of campaign and profile build. It's the working foundation every program runs on, and it happens once, in month 1. Weekly billing starts in month 2.",
+      "We recommend resources around your market, competition, current brand position and growth goals. The higher priced program is appropriate when the work requires it. Paying more does not inherently produce greater success.",
+  },
+  {
+    question: "Does my program include a website?",
+    answer:
+      "Yes. We build a new agentic website and provide hosting and ongoing management. You retain your original site and domain. Ownership of the custom new site transfers after 12 completed service months. An optional earlier purchase is available under the agreement, and platform and third party licenses apply.",
+  },
+  {
+    question: "What is the commitment?",
+    answer:
+      "The initial commitment is 90 days. After that initial term, either party may give 30 days written notice. The agreement explains cancellation, breach remedies, ownership and transition.",
+  },
+  {
+    question: "Do you guarantee rankings, AI mentions or revenue?",
+    answer:
+      "No. We agree on measurable marketing targets and report progress. Client capacity, sales execution and market conditions also affect business results. AI citations and cost metrics may be reported separately, and they are not additional payment categories.",
   },
 ];

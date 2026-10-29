@@ -23,7 +23,7 @@ export const serviceCopy: Record<string, ServiceCopy> = {
       {
         question: "How much does video production cost with TopServ Digital?",
         answer:
-          "Video production is included in every TopServ program (billed weekly, from $1,000/week), and every program begins with a one-time $10,000 activation that covers the two-day on-site shoot: a full library of brand, testimonial, ad, and recruiting video that feeds every channel from day one.",
+          "Video production is included in every TopServ program, and every program begins with a one time $15,000 activation that covers the initial production: strategy, scripting, planning, crew, travel, lodging and editing, plus your first month of service and the new website. The first shoot is 2 days and produces a full library of brand, testimonial, ad, and recruiting video that feeds every channel from day one.",
       },
       {
         question: "Why should a home service company invest in video?",

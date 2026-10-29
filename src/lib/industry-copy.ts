@@ -22,7 +22,7 @@ export const industryCopy: Record<string, IndustryCopy> = {
       {
         question: "How much should an HVAC company spend on marketing?",
         answer:
-          "A common benchmark for growth-mode home service companies is 5–10% of annual revenue. TopServ's programs start at $1,000 per week (the floor, not a menu price) plus a one-time $10,000 activation, with video production included; the actual number comes from your market's scope, and the Brand Assessment is where that starts.",
+          "A common benchmark for growth-mode home service companies is 5–10% of annual revenue. TopServ's 3 BrandFormance programs have monthly bases of $3,000, $5,000 and $8,000 from month 2, plus quarterly Performance Pay we have to earn and a one time $15,000 activation with video production included. Advertising spend is separate, and which program fits comes from your market, competition and growth goals.",
       },
       {
         question: "What marketing works best for HVAC companies?",

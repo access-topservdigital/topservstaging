@@ -130,6 +130,7 @@ export const industries: Industry[] = [
   },
 ];
 
-// Pricing per spec v2: NO price table anywhere. The floor, the activation,
-// and the scope factors live in src/lib/bf-content.ts (pricingModel).
-// Program names and internal rates belong to the sales console, not the site.
+// Pricing: the approved offer lives in src/lib/bf-content.ts (pricingModel)
+// and nothing here restates a figure. The 3 programs, the activation, the
+// scorecard and the fit factors are all read from there, so the pages, the
+// FAQs, llms.txt and the chat concierge cannot drift apart.

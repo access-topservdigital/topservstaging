@@ -237,9 +237,9 @@ export function PDeliversCta() {
           </div>
           <div>
             <p className="max-w-[54ch] text-[1.0625rem] leading-relaxed text-muted-foreground md:text-lg">
-              There is no price table, and there is a reason for that. The next
-              page sets out the floor, what the activation covers, and the 5
-              things that move the number.
+              The next page publishes all 3 programs in full: the monthly base,
+              the Performance Pay each one can earn, what the activation covers,
+              and how the right program is recommended.
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
               <Button asChild size="lg" className="text-base">

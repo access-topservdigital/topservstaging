@@ -1,38 +1,68 @@
-# TopServ Digital — Pricing
+# TopServ Digital: Pricing
 
-TopServ Digital does not publish a price table, on purpose. A table invites
-you to pick a tier before anyone has diagnosed anything, and it fixes a price
-against a scope nobody has seen. Price is derived per client from scope; no
-two clients in the same market price the same. What TopServ publishes is the
-honest anchor. Current as of August 2026; confirm on a discovery call:
+TopServ Digital publishes its programs in full. A program is recommended
+after an assessment rather than picked off a page, because the level
+reflects the resources a plan requires, not a different quantity of
+deliverables and not a greater likelihood of success. Current as of October
+2026; confirm on a BrandFormance Call:
 https://book.topservdigital.com/discovery-calendar
 
-## The floor — $1,000/week
+## The 3 programs
 
-Programs start at $1,000 per week. That is the floor rate to manage the work,
-not a menu price. Pricing runs weekly because the work runs weekly: brand
-advertising is bought at a weekly frequency floor, content ships weekly, and
-reporting runs against weekly delivery. TopServ does not quote monthly or
-annual figures.
+| Program | Monthly base, from month 2 | Performance Pay cap per quarter | Monthly equivalent of the cap |
+|---|---|---|---|
+| BrandFormance Program 1 | $3,000 | $6,000 | Up to $2,000 |
+| BrandFormance Program 2 | $5,000 | $9,000 | Up to $3,000 |
+| BrandFormance Program 3 | $8,000 | $12,000 | Up to $4,000 |
 
-## The activation — $10,000 (one time, month 1, every program)
+Performance Pay is earned and billed quarterly. Advertising spend is
+separate and is never inside a base. A base is not an all-inclusive price.
 
-Every program begins with a one time $10,000 activation that funds the
-two-day on-site video shoot and the evergreen content library it produces,
-travel, the pre-shoot strategy build, editing, and the first month of
-campaign and profile build. Weekly billing starts in month 2. The activation
-is not a fee; it is the working foundation every program runs on.
+## The activation: $15,000, one time
 
-## What sets the number
+A one time $15,000 activation. It includes the first month of service, the
+new agentic website, and the initial video production: strategy, scripting,
+planning, crew, travel, lodging and editing. The first shoot is 2 days, with
+a 3rd included if TopServ determines it is needed. Additional shoots and
+approved extras are priced separately.
 
-- Market size
-- Competitive saturation
-- Current brand position
-- Service area
-- Video scope
+Month 1 carries no additional base invoice and no Performance Pay. Base
+billing starts in month 2. The first performance period is service months 2
+to 4, and later periods are consecutive 3 service month groups rather than
+calendar quarters.
 
-The Brand Assessment produces the scope, and the scope produces the price.
-Start at https://topservdigital.com/brand-assessment
+## How Performance Pay is earned
+
+| Category | Weight | What is measured |
+|---|---|---|
+| Be Seen | 30% | Verified weekly brand reach and average frequency on 1 primary platform. |
+| Be Found | 30% | Growth in total branded and non-branded organic sessions. |
+| Be Chosen | 30% | Growth in distinct qualified service opportunities from new and existing customers. |
+| Client Experience | 10% | Monthly feedback on communication, follow-through and responsiveness. |
+
+Each category earns independently. Below 60% achievement a category earns
+$0. From 60% through 100% it earns that percentage of its available amount,
+and scores cap at 100%. There is no aggregate gate and no payout band. This
+is not a 60/40 or 50/50 split, not a bonus, and not a guaranteed result.
+
+Baselines and targets are set during activation. Proposed targets are due at
+least 10 calendar days before each period and need approval before
+measurement begins. Both parties verify and approve payable results before
+any Performance Pay request.
+
+## How a program is recommended
+
+- Market and service area
+- Competition
+- Current brand equity
+- Growth goals
+
+A smaller market with ambitious goals can need more resources than a larger
+market with modest ones. The Brand Assessment is where it starts:
+https://topservdigital.com/brand-assessment
+
+A Brand Grade is not the performance payment score. The grade reads how well
+a market knows a company. The score measures agreed work.
 
 ## More territory, same frequency
 
@@ -42,9 +72,11 @@ impressions. Territory is the variable; frequency is the constant.
 
 ## Every program includes
 
-- The full BrandFormance system
-- The two-day video shoot and an evergreen content library
-- SEO, paid media, automation, and lead capture
+- The full BrandFormance system: Website and Hosting, SEO and AIO, Paid
+  Media, Social and Reputation, Video and Strategy
+- The initial 2 day video shoot and an evergreen content library
+- A new agentic website, hosted and managed, with ownership of the custom
+  site transferring after 12 completed service months
 
 ---
 

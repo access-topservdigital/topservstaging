@@ -108,19 +108,22 @@ export const jbVideos = {
 } as const satisfies Record<string, JbVideo>;
 
 /**
- * The 2 case study films. They belong on /case-studies, which is built and
- * waiting for them, but they are NOT published: both name a client on
- * camera, and whether any client may be named publicly is still Ryan's
- * call, the same decision namesCleared in bf-content.ts is waiting on.
+ * The 2 case study films. Both name a client on camera, which is why they
+ * sat behind this flag while clearance was open.
  *
- * Flip caseStudyFilmsCleared to true when Ryan confirms and the section
- * appears. Nothing else needs changing.
+ * CLEARED. Jonathan's answer of 21 October puts Watt's Right on the site,
+ * and his Pricing Page Developer Handoff of 14 October names both films as
+ * the pricing page's proof. They ship at launch, so this stays true and
+ * namesCleared in bf-content.ts stays true with it. There is no longer a
+ * date by which either has to be switched back.
+ *
+ * They render in 2 places: the proof band on /case-studies and the proof
+ * section on /programs-pricing/pricing. Neither may imply these clients
+ * used the Performance Pay model, because both predate it.
  *
  *   Watt's Right case study     youtu.be/FkPt_Ar1XjQ   2026-09-10  PT59S
  *   Spencer Air Conditioning    youtu.be/pCZ8xnk0z18   2026-09-10  PT57S
  */
-// On for review, so Ryan can watch both films in place. Set back to false
-// before the domain is connected unless he has confirmed by then.
 export const caseStudyFilmsCleared = true;
 
 export const heldForNameClearance = {

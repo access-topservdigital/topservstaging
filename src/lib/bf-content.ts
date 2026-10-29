@@ -2,10 +2,13 @@
  * BrandFormance site content, per Build Specification v2 (Aug 2026).
  * The spec is canonical: six stages, three phases, four public brand
  * grades (grade only, never score components or weights), six named
- * clients, the $1,000/week floor plus $10,000 activation as the only
- * public numbers (never monthly, never annual), and brand frequency
- * fixed at 3x weekly with geography as the variable. Copy standards:
- * bold, clear, direct, numerals, no em dashes.
+ * clients, and brand frequency fixed at 3x weekly with geography as the
+ * variable. Copy standards: bold, clear, direct, numerals, no em dashes.
+ *
+ * PRICE IS THE 1 PLACE THE SPEC NO LONGER RULES. Its "no price table, the
+ * $1,000/week floor and the $10,000 activation only" was superseded by
+ * Jonathan's Pricing Page Developer Handoff of 14 October 2026. See
+ * pricingModel below, and CLAUDE.md's resolved conflicts.
  */
 
 export const oneLine = "Stop Chasing Leads. Start Building a Brand Customers Choose.";
@@ -98,28 +101,163 @@ export const threePhases = [
 ] as const;
 
 /**
- * Pricing per spec v2: NO price table, ever. The site publishes the floor
- * and the activation only. Price is derived per client from scope by the
- * Growth Engine. Never publish annual or monthly figures anywhere.
+ * THE APPROVED BRANDFORMANCE OFFER. The single shared configuration for
+ * every surface that states a price: the Pricing page, the FAQ sets, the
+ * chat concierge, llms.txt, pricing.md and the industry and service copy.
+ * Source: Jonathan's Pricing Page Developer Handoff, 14 October 2026, which
+ * states in its own first line that it replaces the 8 October handoff
+ * "including its names, amounts, activation, percentage split and payout
+ * ladder".
+ *
+ * THIS SUPERSEDES BUILD SPEC v2 ON PRICE, AND ONLY ON PRICE. The spec's
+ * non-negotiable was "no price table, the $1,000/week floor and the $10,000
+ * activation are the only public numbers, never monthly, never annual". The
+ * approved offer is 3 monthly bases, a quarterly Performance Pay cap and a
+ * $15,000 activation, so the site now publishes exactly what the spec
+ * forbade. The handoff is 2 months newer and comes from the author of the
+ * spec, which is why it wins. Recorded in CLAUDE.md under the resolved
+ * conflicts rather than resolved silently. Every other non-negotiable is
+ * untouched: the assessment still returns a GRADE and never a number, and
+ * brand frequency is still fixed at 3 times weekly.
+ *
+ * LANGUAGE RULES THE HANDOFF SETS, which bind every surface below:
+ *   - Never call it a 60/40 or 50/50 split, a bonus, or a guaranteed result.
+ *   - Never mark a base as an all-inclusive price. Advertising is separate,
+ *     and that disclosure stays visible near every figure.
+ *   - Program level means the resources a plan requires. It never means more
+ *     deliverables, and it never means a greater likelihood of success.
+ *   - A Brand Grade is not the performance payment score. They are different
+ *     objects and nothing may imply otherwise.
  */
 export const pricingModel = {
-  floor: "$1,000",
-  floorLine: "Programs start at $1,000 per week. That is the floor rate to manage the work. It is a floor, not a menu price.",
-  activation: "$10,000",
-  activationLine:
-    "A one time $10,000 activation in month 1 covers the 2 day video shoot, travel, and the first month of build.",
-  whatSetsTheNumber: [
-    "Market size",
-    "Competitive saturation",
-    "Current brand position",
-    "Service area",
-    "Video scope",
+  programs: [
+    {
+      name: "BrandFormance Program 1",
+      short: "Program 1",
+      base: "$3,000",
+      capPerQuarter: "$6,000",
+      capPerMonth: "$2,000",
+    },
+    {
+      name: "BrandFormance Program 2",
+      short: "Program 2",
+      base: "$5,000",
+      capPerQuarter: "$9,000",
+      capPerMonth: "$3,000",
+    },
+    {
+      name: "BrandFormance Program 3",
+      short: "Program 3",
+      base: "$8,000",
+      capPerQuarter: "$12,000",
+      capPerMonth: "$4,000",
+    },
   ],
+
+  activation: "$15,000",
+  activationLine:
+    "A one time $15,000 activation. It includes your first month of service, the new agentic website, and the initial video production: strategy, scripting, planning, crew, travel, lodging and editing. The first shoot is 2 days, with a 3rd included if TopServ determines it is needed.",
+
+  /** Month 1 is inside the activation. Everything else starts in month 2. */
+  billingLine:
+    "Month 1 carries no additional base invoice and no Performance Pay. Base billing starts in month 2. The first performance period is service months 2 to 4, and later periods are consecutive 3 service month groups rather than calendar quarters.",
+  advertisingLine:
+    "Advertising spend is a separate, approved budget. It is never inside a base and never inside the activation.",
+
+  /** The 4 categories. Weights total 100. Each one earns on its own. */
+  scorecard: [
+    {
+      category: "Be Seen",
+      weight: "30%",
+      visible: "Verified weekly brand reach and frequency.",
+      metric:
+        "Verified weekly brand reach and average frequency on 1 primary platform.",
+    },
+    {
+      category: "Be Found",
+      weight: "30%",
+      visible: "Growth in branded and non-branded organic traffic.",
+      metric: "Growth in total branded and non-branded organic sessions.",
+    },
+    {
+      category: "Be Chosen",
+      weight: "30%",
+      visible:
+        "Qualified service opportunities from new and existing customers.",
+      metric:
+        "Growth in distinct qualified service opportunities from new and existing customers.",
+    },
+    {
+      category: "Client Experience",
+      weight: "10%",
+      visible: "Your feedback on our partnership.",
+      metric:
+        "Monthly feedback on communication, follow-through and responsiveness.",
+    },
+  ],
+
+  earningRule:
+    "Each category earns independently. Below 60% achievement a category earns $0. From 60% through 100% it earns that percentage of its available amount, and scores cap at 100%. There is no aggregate gate, no payout band and no 95% threshold.",
+  targetsLine:
+    "Baselines and targets are set during activation. Proposed targets are due at least 10 calendar days before each period and need approval before measurement begins. Both parties verify and approve payable results before any Performance Pay request. Late reporting leaves a payment pending rather than forfeited.",
+
+  /**
+   * The worked example. Program 3, and it must stay labelled illustrative:
+   * the percentages are achievement against agreed targets, not traffic
+   * growth and not survey ratings. Be Chosen earns $0 on purpose, because a
+   * category below 60% is the part of the model people miss.
+   */
+  example: {
+    label: "Illustrative Program 3 example, not actual client results.",
+    rows: [
+      { category: "Be Seen", achievement: "80%", available: "$3,600", earned: "$2,880" },
+      { category: "Be Found", achievement: "75%", available: "$3,600", earned: "$2,700" },
+      { category: "Be Chosen", achievement: "50%", available: "$3,600", earned: "$0" },
+      { category: "Client Experience", achievement: "90%", available: "$1,200", earned: "$1,080" },
+    ],
+    availableTotal: "$12,000",
+    earnedTotal: "$6,660",
+    note: "Be Chosen earns $0 because it is below 60%.",
+    fullPeriod:
+      "3 base payments total $24,000. Adding the earned Performance Pay gives $30,660 for this full funded period, before advertising. The activation was paid in month 1, outside this first performance period.",
+  },
+
+  /** What a recommendation is read from. No numeric weights, ever. */
+  fitFactors: [
+    {
+      name: "Market and service area",
+      detail: "The geography and the number of households you actually serve.",
+    },
+    {
+      name: "Competition",
+      detail: "Who else is buying attention in the same map, and how hard.",
+    },
+    {
+      name: "Current brand equity",
+      detail: "How well the market knows you before any money is spent.",
+    },
+    {
+      name: "Growth goals",
+      detail: "What you want to pursue, which is not always what is easiest.",
+    },
+  ],
+
+  /** The managed scope strip. 1 system, not 5 retainers. */
+  scope: [
+    "Website and Hosting",
+    "SEO and AIO",
+    "Paid Media",
+    "Social and Reputation",
+    "Video and Strategy",
+  ],
+
   howReached:
-    "The assessment and the research modules produce the scope. The scope produces the price. The program is assigned by diagnosis, not chosen from a menu.",
-  // Spec v2 section 6: frequency is fixed at the floor of 3 times weekly at
-  // every rung. Geography is the variable. Larger programs buy more
-  // territory held at the same frequency, never more frequency.
+    "We assess the geography and households you serve, your competition, your current brand equity and the growth you want to pursue. A smaller market with ambitious goals can need more resources than a larger market with modest ones. We recommend the program that fits your plan, then adapt the work inside the approved scope and budget.",
+
+  // Spec v2 section 6, untouched by the October handoff: frequency is fixed
+  // at the floor of 3 times weekly at every level. Geography is the
+  // variable. Larger programs buy more territory held at the same
+  // frequency, never more impressions.
   frequencyDoctrine:
     "Brand frequency is fixed: 3 times weekly, at every level. What a larger program buys is more geography held at that same frequency, never more impressions. Competitors sell more impressions. We sell more territory, owned properly.",
 } as const;

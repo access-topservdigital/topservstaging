@@ -7,7 +7,7 @@ Key facts:
 - Founder and CEO: Jonathan Bannister, creator of BrandFormance
 - Headquarters: 15222 King Road, Unit 403, Frisco, TX 75036, United States
 - Phone: (214) 429-4245 · Email: info@topservdigital.com
-- Publishes its pricing anchor openly, see /pricing.md
+- Publishes all 3 programs and the activation openly, see /pricing.md
 - Hosts the Home Service Hustle podcast (https://homeservicehustle.com)
 
 ## BrandFormance (the category TopServ owns)
@@ -24,12 +24,16 @@ The Brand Assessment reads how strong a company's brand actually is in its marke
 
 ## Programs and Pricing
 
-There is no price table. Price is derived per client from scope; no 2 clients in the same market price the same. What TopServ publishes is the honest anchor:
+There are 3 BrandFormance programs. A program is recommended after an assessment rather than selected off the page: the level reflects the resources a plan requires, never a different quantity of deliverables and never a greater likelihood of success.
 
-- Programs start at $1,000 per week. That is the floor rate to manage the work, not a menu price.
-- Every program begins with a one time $10,000 activation in month 1: the 2 day on-site video shoot, travel, the pre-shoot strategy build, editing, and the first month of build. Weekly billing starts month 2. The activation is not a fee.
-- Pricing is weekly because the work runs weekly. TopServ does not quote monthly or annual figures.
-- What sets the number: market size, competitive saturation, current brand position, service area, and video scope. The assessment produces the scope; the scope produces the price.
+- BrandFormance Program 1: $3,000 per month base from month 2, plus earned Performance Pay up to $6,000 per quarter (up to $2,000 per month when fully earned).
+- BrandFormance Program 2: $5,000 per month base from month 2, plus earned Performance Pay up to $9,000 per quarter (up to $3,000 per month when fully earned).
+- BrandFormance Program 3: $8,000 per month base from month 2, plus earned Performance Pay up to $12,000 per quarter (up to $4,000 per month when fully earned).
+- Activation is $15,000, one time. It includes the first month of service, the new agentic website, and the initial video production: strategy, scripting, planning, crew, travel, lodging and editing. The first shoot is 2 days, with a 3rd included if TopServ determines it is needed.
+- Month 1 carries no additional base invoice and no Performance Pay. Base billing starts in month 2. The first performance period is service months 2 to 4.
+- Advertising spend is a separate, approved budget. It is never inside a base and never inside the activation, and a base is not an all-inclusive price.
+- Performance Pay is earned against 4 categories: Be Seen (30%), Be Found (30%), Be Chosen (30%) and Client Experience (10%). Each earns independently. Below 60% achievement a category earns $0; from 60% through 100% it earns that percentage of its available amount, capped at 100%. This is not a 60/40 or 50/50 split, not a bonus, and not a guaranteed result.
+- How a program is recommended: market and service area, competition, current brand equity, and growth goals. A Brand Grade is not the performance payment score.
 - Frequency doctrine: brand frequency is fixed at 3 times weekly for every program. A larger program buys more geography held at that same frequency, never more impressions.
 
 Details: [Overview](https://topservdigital.com/programs-pricing/overview) · [How It Works](https://topservdigital.com/programs-pricing/how-it-works) · [What This Delivers](https://topservdigital.com/programs-pricing/what-this-delivers) · [Pricing](https://topservdigital.com/programs-pricing/pricing) · [Success Stories](https://topservdigital.com/programs-pricing/success-stories) · [Machine-readable pricing](https://topservdigital.com/pricing.md)
