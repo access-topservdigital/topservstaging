@@ -25,6 +25,7 @@ const pricingBlock = [
     .map((s) => `${s.category} ${s.weight} (${s.visible})`)
     .join(", ")}`,
   `- ${pricingModel.earningRule}`,
+  `- ${pricingModel.targetsLine}`,
   `- How a program is recommended: ${pricingModel.howReached}`,
   `- ${pricingModel.frequencyDoctrine}`,
 ].join("\n");

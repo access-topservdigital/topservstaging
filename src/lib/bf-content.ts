@@ -196,10 +196,29 @@ export const pricingModel = {
     },
   ],
 
+  /**
+   * 2 versions on purpose, because the handoff carries 2 and they are not
+   * interchangeable.
+   *
+   * earningRule and targetsLine are from "Approved offer and measurement
+   * rules", the configuration that binds every surface. They are the full
+   * statement and they are what the chat concierge and llms.txt quote,
+   * where length costs nothing.
+   *
+   * pageRule and periodRule are from "Pricing page copy", which says the
+   * same thing in 2 lines. They are what the Pricing page renders, because
+   * the page sets them under a 4 card row and the long version becomes a
+   * narrow 7 line column in the middle of a wide band.
+   */
   earningRule:
     "Each category earns independently. Below 60% achievement a category earns $0. From 60% through 100% it earns that percentage of its available amount, and scores cap at 100%. There is no aggregate gate, no payout band and no 95% threshold.",
   targetsLine:
     "Baselines and targets are set during activation. Proposed targets are due at least 10 calendar days before each period and need approval before measurement begins. Both parties verify and approve payable results before any Performance Pay request. Late reporting leaves a payment pending rather than forfeited.",
+
+  pageRule:
+    "Each category earns independently. Below 60% achievement: $0. At 60% through 100%: that percentage of the category's available payment.",
+  periodRule:
+    "Targets agreed during activation. Progress reported monthly. First performance period: months 2 to 4.",
 
   /**
    * The worked example. Program 3, and it must stay labelled illustrative:

@@ -365,9 +365,10 @@ export function PPerformance() {
           })}
         </ul>
 
-        <p className="mx-auto mt-8 max-w-[72ch] text-center text-[0.8125rem] leading-relaxed text-ink-faint">
-          {pricingModel.earningRule} {pricingModel.targetsLine}
-        </p>
+        <div className="mx-auto mt-9 max-w-[104ch] text-pretty text-center text-[0.875rem] leading-relaxed text-ink-faint">
+          <p>{pricingModel.pageRule}</p>
+          <p className="mt-1.5">{pricingModel.periodRule}</p>
+        </div>
       </Shell>
     </section>
   );
@@ -426,20 +427,28 @@ export function PExample() {
             className="mt-7 block h-px w-full bg-[rgba(244,245,242,0.12)]"
           />
 
-          <p className="mt-7 text-center text-[1.0625rem] font-semibold text-foreground md:text-[1.25rem]">
-            Earned quarterly Performance Pay:{" "}
-            <span className="display text-brand">
-              {example.earnedTotal} of {example.availableTotal}
-            </span>
-          </p>
-          <p className="mt-2 text-center text-[0.875rem] text-muted-foreground">
-            {example.note}
-          </p>
-          <p className="mx-auto mt-5 max-w-[76ch] text-center text-[0.8125rem] leading-relaxed text-ink-faint">
-            {example.fullPeriod} Results require usable evidence and mutual
-            approval. The percentages are achievement against agreed targets,
-            not traffic growth and not survey ratings.
-          </p>
+          <div className="mt-7 grid gap-5 md:grid-cols-[minmax(0,38fr)_minmax(0,62fr)] md:items-start md:gap-12">
+            <div>
+              <p className="text-[1.0625rem] font-semibold leading-snug text-foreground md:text-[1.125rem]">
+                Earned quarterly Performance Pay
+              </p>
+              <p className="display mt-2 text-[clamp(1.75rem,3.4vw,2.25rem)] leading-none text-brand">
+                {example.earnedTotal}{" "}
+                <span className="text-ink-faint">of {example.availableTotal}</span>
+              </p>
+            </div>
+
+            <div>
+              <p className="text-[0.9375rem] leading-relaxed text-muted-foreground">
+                {example.note}
+              </p>
+              <p className="mt-3 text-[0.8125rem] leading-relaxed text-ink-faint">
+                {example.fullPeriod} Results require usable evidence and mutual
+                approval. The percentages are achievement against agreed
+                targets, not traffic growth and not survey ratings.
+              </p>
+            </div>
+          </div>
         </div>
       </Shell>
     </section>
